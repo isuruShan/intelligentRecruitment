@@ -1,0 +1,44 @@
+{% load socialaccount %}
+{% load static %}
+
+<style>
+    .socialaccount_provider{
+        margin-right: 30px;
+    }
+</style>
+
+{% get_providers as socialaccount_providers %}
+
+{% for provider in socialaccount_providers %}
+{% if provider.id == "openid" %}
+{% for brand in provider.get_brands %}
+<li>
+  <a title="{{brand.name}}"
+     class="socialaccount_provider {{provider.id}} {{brand.id}}"
+     href="{% provider_login_url provider.id openid=brand.openid_url process=process %}"
+     >{{brand.name}}</a>
+</li>
+
+{% endfor %}
+{% endif %}
+<li>
+    {% if provider.name == "Facebook"  %}
+        <a title="{{provider.name}}" class="socialaccount_provider {{provider.id}}"
+         href="{% provider_login_url provider.id process=process scope=scope auth_params=auth_params %}">
+            <img src="{% static "image/facebook-login.png" %}" width="50" height="50" >
+        </a>
+    {% elif provider.name == "Google" %}
+        <a title="{{provider.name}}" class="socialaccount_provider {{provider.id}}"
+         href="{% provider_login_url provider.id process=process scope=scope auth_params=auth_params %}">
+            <img src="{% static "image/Google_Plus-login.png" %}" width="50" height="50" >
+        </a>
+    {% elif provider.name == "LinkedIn" %}
+        <a title="{{provider.name}}" class="socialaccount_provider {{provider.id}}"
+         href="{% provider_login_url provider.id process=process scope=scope auth_params=auth_params %}">
+            <img src="{% static "image/linkedin-login.png" %}" width="50" height="50" >
+        </a>
+    {% endif %}
+
+
+</li>
+{% endfor %}
