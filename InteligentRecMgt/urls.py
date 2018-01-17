@@ -13,7 +13,7 @@ Including another URLconf
     1. Import the include() function: from django.conf.urls import url, include
     2. Add a URL to urlpatterns:  url(r'^blog/', include('blog.urls'))
 """
-from django.conf.urls import url,include
+from django.conf.urls import url, include
 from django.contrib import admin
 
 urlpatterns = [
@@ -21,4 +21,9 @@ urlpatterns = [
     url(r'^user/', include('user.urls')),
     url(r'^comp/', include('competencyEval.urls')),
     url(r'^accounts/', include('allauth.urls')),
+
+    #AutoQA module URLs
+    #START
+    url(r'^AutoQA/', include('AutoQA.urls')),
+    #END
 ]
