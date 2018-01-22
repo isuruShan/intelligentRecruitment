@@ -26,4 +26,6 @@ urlpatterns = [
     #START
     url(r'^AutoQA/', include('AutoQA.urls')),
     #END
+
+    url(r'^Fuzzy/', include('Fuzzy_Inference_System_Module.urls')),
 ]
