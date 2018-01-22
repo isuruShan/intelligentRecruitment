@@ -1,13 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from .compromise import *
-import os
-import sys
-import cv2
-import numpy as np
-import argparse
-import matplotlib.pyplot as plt
-from datetime import datetime
+
 from owlready2 import *
 import urllib.request
 import shutil
