@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.sites',
     'competencyEval',
     'user',
+    'numpy',
 
     #the allauth apps
     'allauth',

@@ -2,7 +2,7 @@ from django.conf.urls import url
 from .views import *
 
 urlpatterns = [
-    url(r'^issa^', issa),
+    url(r'^issa', issa),
     url(r'^dula', dula),
 
 ]

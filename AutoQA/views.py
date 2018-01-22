@@ -3,7 +3,6 @@ from django.http import HttpResponse
 from .compromise import *
 import os
 import sys
-import cv2
 import numpy as np
 import argparse
 import matplotlib.pyplot as plt
