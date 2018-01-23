@@ -3,6 +3,9 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/InteligentRecMgt.iml" filepath="$PROJECT_DIR$/.idea/InteligentRecMgt.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../cnn-text-classification-tf-master/.idea/cnn-text-classification-tf-master.iml" filepath="$PROJECT_DIR$/../cnn-text-classification-tf-master/.idea/cnn-text-classification-tf-master.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../tensorflow_test/.idea/tensorflow_test.iml" filepath="$PROJECT_DIR$/../tensorflow_test/.idea/tensorflow_test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../test_2/.idea/test_2.iml" filepath="$PROJECT_DIR$/../test_2/.idea/test_2.iml" />
     </modules>
   </component>
 </project>

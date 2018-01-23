@@ -16,6 +16,9 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="R User Library" level="project" />
     <orderEntry type="library" name="R Skeletons" level="application" />
+    <orderEntry type="module" module-name="tensorflow_test" />
+    <orderEntry type="module" module-name="test_2" />
+    <orderEntry type="module" module-name="cnn-text-classification-tf-master" />
   </component>
   <component name="TemplatesService">
     <option name="TEMPLATE_CONFIGURATION" value="Django" />
