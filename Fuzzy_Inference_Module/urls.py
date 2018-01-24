@@ -1,8 +1,8 @@
 from django.conf.urls import url
-from .views import *
+#from .views import *
 
-urlpatterns = [
-    url(r'^issa', issa),
-    url(r'^dula', dula),
+#urlpatterns = [
+#    url(r'^issa^', issa),
+#    url(r'^dula', dula),
 
-]
+#]
