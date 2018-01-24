@@ -1,12 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from .compromise import *
-import os
-import sys
-import numpy as np
-import argparse
-import matplotlib.pyplot as plt
-from datetime import datetime
 from owlready2 import *
 import urllib.request
 import shutil
@@ -29,10 +23,11 @@ def index(request):
     onto_path.append(target)
     onto = get_ontology("http://www.lesfleursdunormal.fr/static/_downloads/pizza_onto.owl")
     onto.load()
+    print(onto.FishTopping)
     #onto.save(target, "ont")
 
     destination = "/".join([target, "ontol"])
-    with urllib.request.urlopen("http://www.lesfleursdunormal.fr/static/_downloads/pizza_onto.owl") as response, open("Onto", 'wb') as destination:
+    with urllib.request.urlopen("http://www.lesfleursdunormal.fr/static/_downloads/pizza_onto.owl") as response, open("Onto.owl", 'wb') as destination:
         shutil.copyfileobj(response, destination)
 
     return HttpResponse(str)

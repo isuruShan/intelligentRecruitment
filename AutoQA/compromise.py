@@ -1,6 +1,8 @@
 
 import numpy as np
 from random import randrange
+import requests
+import  language_check
 
 class Compromise:
     def compromise(self):
@@ -8,7 +10,26 @@ class Compromise:
         qArry = classCompromise.qArry()
         aArry = classCompromise.aArry()
         random_index = randrange(0, len(qArry))
-        return "Question: " + qArry[random_index] + " </br> answer: " + aArry[random_index]
+        questionStr = qArry[random_index]
+        answerStr = aArry[random_index]
+
+        #here we validate the created questions
+        tool = language_check.LanguageTool('en-US')
+        matchesQuestion = tool.check(questionStr)
+        matchesAnswer = tool.check(answerStr)
+        questionStr = language_check.correct(questionStr, matchesQuestion)
+        answerStr = language_check.correct(answerStr, matchesAnswer)
+
+        # url = "http://api.meaningcloud.com/stilus-1.2"
+        #
+        # payload = classCompromise.payload()
+        # headers = {'content-type': 'application/x-www-form-urlencoded'}
+        #
+        # response = requests.request("POST", url, data=payload, headers=headers)
+        #
+        # print(response.text)
+        #
+        return "Question: " + questionStr + " </br> answer: " + answerStr
 
     def qArry(self):
         quesList = ["this is the start of questions set"]
@@ -20,7 +41,7 @@ class Compromise:
             "What does SDLC stands for?",
             "Which model can be selected if user is involved in all the phases of SDLC?",
             "Explain what is meant by PRODUCT with reference to one of the eight principles as per the ACM/IEEE Code of Ethics ?",
-            "What is a Software ?",
+            "is What a Software ?",
             "What are attributes of good software ?",
             "Mention two types of software products",
             "is Incremental Model an Evolutionary Process Model?",
@@ -105,6 +126,11 @@ class Compromise:
             "Verifiable",
             "Non-verifiable",
         ])
-
-
         return ansList
+
+    def payload(self):
+        key = ""
+        lang = 'en-GB'
+        txt = "how hello are you"
+        url = ""
+        doc = ""
