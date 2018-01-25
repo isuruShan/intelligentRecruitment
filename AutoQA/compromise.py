@@ -2,7 +2,7 @@
 import numpy as np
 from random import randrange
 import requests
-import  language_check
+import language_check
 
 class Compromise:
     def compromise(self):
@@ -41,7 +41,7 @@ class Compromise:
             "What does SDLC stands for?",
             "Which model can be selected if user is involved in all the phases of SDLC?",
             "Explain what is meant by PRODUCT with reference to one of the eight principles as per the ACM/IEEE Code of Ethics ?",
-            "is What a Software ?",
+            "What is a Software ?",
             "What are attributes of good software ?",
             "Mention two types of software products",
             "is Incremental Model an Evolutionary Process Model?",
