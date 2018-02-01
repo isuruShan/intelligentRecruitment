@@ -23,3 +23,6 @@ rsa==3.4.2
 six==1.11.0
 urllib3==1.22
 owlready2==0.5
+ontospy==1.8.6
+pronto=0.10.2
+ontobio=0.2.27
