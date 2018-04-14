@@ -27,6 +27,10 @@ def index(request):
         answerStr = ontoAnsArry[random_index]
         str02 = "Question: " + questionStr + " </br> answer: " + answerStr
         str = str + "</br> </br>" + str02
+        data = json.dumps(get_ginger_result(questionStr))
+        FirstObj = json.loads(data, object_hook=lambda d: namedtuple('X', d.keys())(*d.values()))
+        print(FirstObj.LightGingerTheTextResult)
+        print(data)
 
 
     #onto.save(target, "ont")
@@ -35,13 +39,11 @@ def index(request):
     # with urllib.request.urlopen("http://www.lesfleursdunormal.fr/static/_downloads/pizza_onto.owl") as response, open("Onto.owl", 'wb') as destination:
     #     shutil.copyfileobj(response, destination)
 
-    data = json.dumps(get_ginger_result("name is what?"))
-    FirstObj = json.loads(data, object_hook=lambda d: namedtuple('X', d.keys())(*d.values()))
+
 
     #InnerObj = FirstObj.LightGingerTheTextResult
 
-    print(FirstObj.LightGingerTheTextResult)
-    print(data)
+
 
 
 
