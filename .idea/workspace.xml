@@ -2,20 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="76d31d59-b107-42c3-bd3e-c8a9bcd24850" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/ExternalFiles/crawler.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/ExternalFiles/punctuations.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/competencyEval/similarity_check.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/competence_eval/overideJquery.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/competence_eval/recorder.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/competence_eval/web.audio.api.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/tether.min.js" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/ExternalFiles/test_sentence_similarity.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ExternalFiles/transcribe_streaming_mic.py" afterPath="$PROJECT_DIR$/ExternalFiles/transcribe_streaming_mic.py" />
-      <change beforePath="$PROJECT_DIR$/competencyEval/templates/cmp_transcribe.html" afterPath="$PROJECT_DIR$/competencyEval/templates/cmp_transcribe.html" />
-      <change beforePath="$PROJECT_DIR$/competencyEval/urls.py" afterPath="$PROJECT_DIR$/competencyEval/urls.py" />
-      <change beforePath="$PROJECT_DIR$/competencyEval/views.py" afterPath="$PROJECT_DIR$/competencyEval/views.py" />
-      <change beforePath="$PROJECT_DIR$/templates/layout/base.html" afterPath="$PROJECT_DIR$/templates/layout/base.html" />
+      <change beforePath="$PROJECT_DIR$/static/js/competence_eval/overideJquery.js" afterPath="$PROJECT_DIR$/static/js/competence_eval/overideJquery.js" />
+      <change beforePath="$PROJECT_DIR$/static/js/competence_eval/web.audio.api.js" afterPath="$PROJECT_DIR$/static/js/competence_eval/web.audio.api.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.idea/shelf/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -81,7 +70,7 @@
         <entry file="file://$PROJECT_DIR$/competencyEval/views.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="576">
-              <caret line="74" column="33" lean-forward="true" selection-start-line="74" selection-start-column="33" selection-end-line="74" selection-end-column="33" />
+              <caret line="74" column="33" lean-forward="false" selection-start-line="74" selection-start-column="33" selection-end-line="74" selection-end-column="33" />
               <folding>
                 <element signature="e#0#31#0" expanded="true" />
               </folding>
@@ -105,7 +94,7 @@
         <entry file="file://$PROJECT_DIR$/ExternalFiles/sentence_sim.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="315">
-              <caret line="323" column="37" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="333" selection-end-column="45" />
+              <caret line="323" column="37" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="333" selection-end-column="45" />
               <folding>
                 <element signature="e#394#425#0" expanded="true" />
               </folding>
@@ -668,7 +657,14 @@
       <option name="project" value="LOCAL" />
       <updated>1516690066365</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="sentence and word similarity basic and google speech api intigration">
+      <created>1525158398555</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1525158398555</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TodoView">
@@ -682,7 +678,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32972974" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20216216" sideWeight="0.50244796" order="7" side_tool="true" content_ui="tabs" />
@@ -985,7 +980,7 @@
         <state relative-caret-position="329">
           <caret line="28" column="62" lean-forward="false" selection-start-line="10" selection-start-column="4" selection-end-line="28" selection-end-column="62" />
           <folding>
-            <element signature="e#0#15#0" expanded="true" />
+            <element signature="e#0#15#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1001,7 +996,7 @@
     <entry file="file://$PROJECT_DIR$/ExternalFiles/sentence_sim.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
-          <caret line="323" column="37" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="333" selection-end-column="45" />
+          <caret line="323" column="37" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="333" selection-end-column="45" />
           <folding>
             <element signature="e#394#425#0" expanded="true" />
           </folding>
@@ -1065,7 +1060,7 @@
     <entry file="file://$PROJECT_DIR$/competencyEval/views.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="576">
-          <caret line="74" column="33" lean-forward="true" selection-start-line="74" selection-start-column="33" selection-end-line="74" selection-end-column="33" />
+          <caret line="74" column="33" lean-forward="false" selection-start-line="74" selection-start-column="33" selection-end-line="74" selection-end-column="33" />
           <folding>
             <element signature="e#0#31#0" expanded="true" />
           </folding>
