@@ -48,6 +48,9 @@ INSTALLED_APPS = [
     'allauth.account',
     'allauth.socialaccount',
 
+    #file provider to ude in AutoQA OntoReturn
+    'fileprovider',
+
     #Allauth social media providors
     'allauth.socialaccount.providers.facebook',
     'allauth.socialaccount.providers.linkedin',
@@ -63,6 +66,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'fileprovider.middleware.FileProviderMiddleware',
 ]
 
 ROOT_URLCONF = 'InteligentRecMgt.urls'

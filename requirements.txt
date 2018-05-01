@@ -26,3 +26,4 @@ owlready2==0.5
 ontospy==1.8.6
 pronto=0.10.2
 ontobio=0.2.27
+django-fileprovider=0.1.4
