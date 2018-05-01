@@ -1,55 +1,89 @@
-import nltk
+from __future__ import division
 
-from django.shortcuts import render,render_to_response
-from django.http import HttpResponse,HttpResponseRedirect
-from .forms import *
-from .models import *
-from django.contrib.auth.decorators import login_required
-from datetime import date
-from django.contrib.auth.models import Permission
-from django.utils.timezone import now
-from django.db.models import Q
+import nltk
 import os
-from nltk.corpus import wordnet as wn
-from nltk import word_tokenize, pos_tag
+import numpy as np
+import scipy.io.wavfile
+import math
+import argparse
+import io
+from django.shortcuts import render,render_to_response
+from django.http import JsonResponse,HttpResponse,HttpResponseRedirect
+from pydub import AudioSegment
+from django.views.decorators.csrf import csrf_exempt
+from google.cloud import speech_v1p1beta1 as speech
+from . similarity_check import para_similarity
 
 
 
 # Create your views here.
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+#google cloude auth file
+os.environ["GOOGLE_APPLICATION_CREDENTIALS"]="/home/isuru/PycharmProjects/gSpeechTest/MyFirstProject-28a3d7098e7b.json"
 
 
+def interview_index(request):
+
+
+    return render_to_response('cmp_transcribe.html')
+
+
+@csrf_exempt
 def transcribe_view(request):
-    print(wn.synsets('cat', 'n'))
-    # [Synset('cat.n.01'), Synset('guy.n.01'), Synset('cat.n.03'), Synset('kat.n.01'), Synset('cat-o'-nine-tails.n.01'), Synset('caterpillar.n.02'), Synset('big_cat.n.01'), Synset('computerized_tomography.n.01')]
+    data = request.body
+    file_name = os.path.join(
+        os.path.dirname(__file__),
+        'test.wav')
+    song = AudioSegment.from_wav(file_name)
+    song = song.set_channels(1)
+    song.export("testme.flac", format="flac")
+    result_1 = {"result": "hello"}
 
-    print(wn.synsets('dog', 'n'))
-    # [Synset('dog.n.01'), Synset('frump.n.01'), Synset('dog.n.03'), Synset('cad.n.01'), Synset('frank.n.02'), Synset('pawl.n.01'), Synset('andiron.n.01')]
+    # obviously handle correct naming of the file and place it somewhere like media/uploads/
+    uploadedFile = open("recording.wav", "wb")
+    # the actual file is in request.body
+    uploadedFile.write(data)
 
-    print(wn.synsets('feline', 'n'))
-    # [Synset('feline.n.01')]
+    uploadedFile.close()
 
-    print(wn.synsets('car', 'n'))
-    # [Synset('cat.n.01')]
+    #using deepgram brain to get the transcript
+    client = speech.SpeechClient()
 
-    # It's important to note that the `Synsets` from such a query are ordered by how frequent that sense appears in the corpus
+    with open("ExternalFiles/Recording_3.wav", 'rb') as audio_file:
+        content = audio_file.read()
+    audio = speech.types.RecognitionAudio(content=content)
+    config = speech.types.RecognitionConfig(
+        enable_automatic_punctuation=True,
+        enable_word_time_offsets=True,
+        encoding=speech.enums.RecognitionConfig.AudioEncoding.LINEAR16,
+        language_code='en-US',
+        model='default')
 
-    # You can check out how frequent a lemma is by doing:
-    cat = wn.synsets('cat', 'n')[0]  # Get the most common synset
-    print(cat.lemmas()[0].count())  # Get the first lemma => 18
+    response = client.recognize(config, audio)
+    para_2 = ""
 
-    dog = wn.synsets('dog', 'n')[0]  # Get the most common synset
-    feline = wn.synsets('feline', 'n')[0]  # Get the most common synset
-    cat = wn.synsets('cat', 'n')[0]  # Get the most common synset
+    for i, result in enumerate(response.results):
+        alternative = result.alternatives[0]
+        print('-' * 20)
+        # print('First alternative of result {}'.format(i))
+        print('Transcript: {}'.format(alternative.transcript))
+        para_2 = alternative.transcript
+    para_similarity("java is good a murray riding programming language for a pond. this is good for a pond", para_2)
 
-    # You can read more about the different types of wordnet similarity measures here: http://www.nltk.org/howto/wordnet.html
-    for synset in [dog, feline, cat ]:
-        print("Similarity(%s, %s) = %s" % (cat, synset, cat.wup_similarity(synset)))
 
-    # Similarity(Synset('cat.n.01'), Synset('dog.n.01')) = 0.2
-    # Similarity(Synset('cat.n.01'), Synset('feline.n.01')) = 0.5
-    # Similarity(Synset('cat.n.01'), Synset('mammal.n.01')) = 0.2
+    return JsonResponse(result_1)
 
-    transcribe = os.path.join(BASE_DIR, 'ExternalFiles/transcribe_streaming_mic.py')
-    return HttpResponse('issa')
+
+
+
+
+
+###################################################################
+        # file_name = "another.wav"
+        # rate = 8000
+        # data2 = np.asarray(request.GET.get('data'), dtype=np.int16)
+        # response = HttpResponse(mimetype='audio/wav')
+        # response['Content-Disposition'] = 'attachment; filename=%s' % smart_str(file_name)
+        # response['Accept-Ranges'] = 'bytes'
+        # response['X-Sendfile'] = smart_str(os.path.dirname(__file__))
