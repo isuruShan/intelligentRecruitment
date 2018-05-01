@@ -1,38 +1,50 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from .compromise import *
-import os
-import sys
-import numpy as np
-import argparse
-import matplotlib.pyplot as plt
-from datetime import datetime
 from owlready2 import *
 import urllib.request
 import shutil
+from .ginger_python2 import *
+import json
+from collections import namedtuple
 
-
-APP_ROOT = os.path.dirname(os.path.abspath(__file__))
 
 def index(request):
     str = "Hello this is view index method </br>"
     classCompromise = Compromise()
+    ArryObj = OntologyQuestions()
+    ontoQstArry = ArryObj["ontoQstArry"]
+    ontoAnsArry = ArryObj["ontoAnsArry"]
+
     str02 = ""
-    for x in range(0, 9):
+    for x in range(0, 3):
         str02 = classCompromise.compromise()
         str = str + "</br> </br>" + str02
 
-    target = os.path.join(APP_ROOT, 'ExampleOntology/')
-    if not os.path.isdir(target):
-        os.mkdir(target)
+    for x in range(3, 10):
+        random_index = randrange(0, len(ontoQstArry))
+        questionStr = ontoQstArry[random_index]
+        answerStr = ontoAnsArry[random_index]
+        str02 = "Question: " + questionStr + " </br> answer: " + answerStr
+        str = str + "</br> </br>" + str02
+        data = json.dumps(get_ginger_result(questionStr))
+        FirstObj = json.loads(data, object_hook=lambda d: namedtuple('X', d.keys())(*d.values()))
+        print(FirstObj.LightGingerTheTextResult)
+        print(data)
 
-    onto_path.append(target)
-    onto = get_ontology("http://www.lesfleursdunormal.fr/static/_downloads/pizza_onto.owl")
-    onto.load()
+
     #onto.save(target, "ont")
 
-    destination = "/".join([target, "ontol"])
-    with urllib.request.urlopen("http://www.lesfleursdunormal.fr/static/_downloads/pizza_onto.owl") as response, open("Onto", 'wb') as destination:
-        shutil.copyfileobj(response, destination)
+    # destination = "/".join([target, "ontol"])
+    # with urllib.request.urlopen("http://www.lesfleursdunormal.fr/static/_downloads/pizza_onto.owl") as response, open("Onto.owl", 'wb') as destination:
+    #     shutil.copyfileobj(response, destination)
+
+
+
+    #InnerObj = FirstObj.LightGingerTheTextResult
+
+
+
+
 
     return HttpResponse(str)

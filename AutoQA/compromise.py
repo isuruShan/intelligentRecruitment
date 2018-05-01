@@ -1,6 +1,17 @@
 
 import numpy as np
 from random import randrange
+import requests
+import language_check
+from owlready2 import *
+import os
+from .models import *
+import string
+import ontospy
+import pronto
+# from ontobio.ontol_factory import OntologyFactory
+
+APP_ROOT = os.path.dirname(os.path.abspath(__file__))
 
 class Compromise:
     def compromise(self):
@@ -8,11 +19,30 @@ class Compromise:
         qArry = classCompromise.qArry()
         aArry = classCompromise.aArry()
         random_index = randrange(0, len(qArry))
-        return "Question: " + qArry[random_index] + " </br> answer: " + aArry[random_index]
+        questionStr = qArry[random_index]
+        answerStr = aArry[random_index]
+
+        #here we validate the created questions
+        tool = language_check.LanguageTool('en-US')
+        matchesQuestion = tool.check(questionStr)
+        matchesAnswer = tool.check(answerStr)
+        questionStr = language_check.correct(questionStr, matchesQuestion)
+        answerStr = language_check.correct(answerStr, matchesAnswer)
+
+        # url = "http://api.meaningcloud.com/stilus-1.2"
+        #
+        # payload = classCompromise.payload()
+        # headers = {'content-type': 'application/x-www-form-urlencoded'}
+        #
+        # response = requests.request("POST", url, data=payload, headers=headers)
+        #
+        # print(response.text)
+        #
+        return "Question: " + questionStr + " </br> answer: " + answerStr
 
     def qArry(self):
-        quesList = ["this is the start of questions set"]
-        quesList.append("lets start")
+        quesList = ["What is inheritance"]
+        quesList.append("What is the four oop consepts")
         quesList.extend([
             "what is RAD stands for?",
             "How many phases RAD Model has?",
@@ -60,8 +90,8 @@ class Compromise:
         return quesList
 
     def aArry(self):
-        ansList = ["this is the start of answer set"]
-        ansList.append("lets start")
+        ansList = ["this lets us build on privious work without reinventing the wheel"]
+        ansList.append("encapsulation, inheritance, abstraction, polymorphism")
         ansList.extend([
             "Rapid Application Development",
             "5 phases",
@@ -105,6 +135,103 @@ class Compromise:
             "Verifiable",
             "Non-verifiable",
         ])
-
-
         return ansList
+
+def OntologyQuestions():
+
+        target = os.path.join(APP_ROOT, 'ExampleOntology/')
+        if not os.path.isdir(target):
+            os.mkdir(target)
+
+        target = "".join([target, "nmrCV.owl"])
+        #target = string.replace(target, '\'', '/')
+        # print(target)
+
+        #ont = OntologyFactory().create("file://"+target)
+        ont = pronto.Ontology("http://nmrml.org/cv/v1.1.0/nmrCV.owl")
+        # ont = pronto.Ontology("file:///"+target)
+        print(ont.obo)
+        print(ont.json)
+
+        parentArry = []
+        childrenArry = []
+
+        for term in ont:
+            if term.children:
+                str = ""
+                val = 1
+                for itm in term.children.name:
+                    if val ==1:
+                        str = itm
+                    else:
+                        str = str + "," + itm
+                    val = val+1
+
+                childrenArry.append(str)
+                if term.desc.strip() == "":
+                    parentArry.append(term.name)
+                else:
+                    parentArry.append(term.desc)
+                # print(term)
+
+        print("**********************************************")
+        print(childrenArry[20])
+        print(parentArry[20])
+        print("**********************************************")
+
+
+
+        #onto_path.append(target)
+        #onto = get_ontology("file://E:/repository/intelligentRecruitment/AutoQA/ExampleOntology/dbpedia_2015-04.owl")
+        #onto = get_ontology("file://"+target)
+        # model = ontospy.Ontospy("http://www.lesfleursdunormal.fr/static/_downloads/pizza_onto.owl")
+        # print(list(model.classes))
+        #ont = pronto.Ontology('https://net.path.should/work/too.owl')
+        #onto = get_ontology("http://tresetsolutions.000webhostapp.com/dbpedia_2015-04.owl") E:\repository\intelligentRecruitment\AutoQA\ExampleOntology/dbpedia_2015-04.owl
+        #onto = get_ontology("http://www.lesfleursdunormal.fr/static/_downloads/pizza_onto.owl")
+        #onto = get_ontology("http://webprotege.stanford.edu/#projects/87b9fe77-af8c-457a-bc5a-f1f598bf9082/edit/Classes?selection=Class(%3Chttp://webprotege.stanford.edu/R8StZAAxh566DvrwIPVwQfR%3E)")
+
+        # onto.load()
+        # print("****************************************")
+        # print(onto.Award)
+        # print(list(onto.classes()))
+        # #print(list(onto.type))
+        # print("****************************************")
+
+        # c = CallObj()
+        # c.x = 'foo'  # setter called
+        # #print(c.x)
+        # foo = c.x  # getter called
+        # print(foo)
+        # del c.x  # deleter called
+        # #print(c.x)
+
+        i = 0
+        for elemnt in parentArry:
+            if parentArry[i].strip() == "" or childrenArry[i].strip() == "":
+                parentArry.remove(parentArry[i])
+                childrenArry.remove(childrenArry[i])
+            i = i+1
+
+        print("**********************************************")
+        print(childrenArry[20])
+        print(parentArry[20])
+        print("**********************************************")
+
+        ontoQstArry = []
+        ontoAnsArry = []
+        i=0
+        for itm in parentArry:
+            if "," in childrenArry[i]:
+                ontoQstArry.append("What are " + parentArry[i] + " ?")
+                ontoAnsArry.append(childrenArry[i])
+            else:
+                ontoQstArry.append("What is " + parentArry[i] + " ?")
+                ontoAnsArry.append(childrenArry[i])
+            i = i+1
+
+        ArryObj = {}
+        ArryObj["ontoQstArry"] = ontoQstArry
+        ArryObj["ontoAnsArry"] = ontoAnsArry
+
+        return ArryObj
