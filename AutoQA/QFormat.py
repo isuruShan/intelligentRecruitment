@@ -4,13 +4,22 @@ from random import randrange
 import requests
 import language_check
 from owlready2 import *
+from .OntoCreate import *
 import os
+import ast
 from .models import *
 import string
 import ontospy
 import pronto
-from pronto import Relationship
+from pronto import Term, Relationship
 # from ontobio.ontol_factory import OntologyFactory
+import urllib.request
+import shutil
+from .ginger_python2 import *
+import json
+from collections import namedtuple
+from django.utils.encoding import smart_str
+
 
 APP_ROOT = os.path.dirname(os.path.abspath(__file__))
 
@@ -21,14 +30,22 @@ class QFormat:
         if not os.path.isdir(target):
             os.mkdir(target)
 
-        target = "".join([target, "nmrCV.owl"])
+        #target = "".join([target, "nmrCV.owl"])
+        target = "".join([target, "nmrCVTest.owl"])
+       # target = "".join([target, "IT_Curriculum_V3.owl"])
         # target = string.replace(target, '\'', '/')
         # print(target)
 
         # ont = OntologyFactory().create("file://"+target)
         # ont = pronto.Ontology("http://nmrml.org/cv/v1.1.0/nmrCV.owl") #http://127.0.0.1:8000/AutoQA/ontoReturn
         # ont = pronto.Ontology("http://127.0.0.1:8000/AutoQA/ontoReturn")
-        ont = pronto.Ontology(target)
+        # ont = pronto.Ontology(target)
+        # t1 = Term('ONT:001', 'my 1st term', 'this is my first term')
+        # t2 = Term('ONT:002', 'my 2nd term', 'this is my second term', {Relationship('part_of'): ['ONT:001']})
+        # ont.include(t1, t2)
+
+        OntoCreateClass = OntoCreate()
+        ont = OntoCreateClass.AddSoftwareEngineerTerms()
         print(ont.obo)
         print("********************************* The Json Obj **************************************")
         print(ont.json)
@@ -59,6 +76,10 @@ class QFormat:
                 else:
                     parentArry.append(term.desc)
                     # print(term)
+
+            else:
+                parentArry.append(term.name)
+                childrenArry.append(term.desc)
 
         print("**********************************************")
         print(childrenArry[20])
@@ -114,8 +135,42 @@ class QFormat:
                 ontoAnsArry.append(childrenArry[i])
             i = i + 1
 
+        QFormatClass = QFormat()
+        ArryObj = QFormatClass.QuestionReform(ontoQstArry, ontoAnsArry)
+        return ArryObj
+
+    def QuestionReform(self, ontoQstArry, ontoAnsArry):
+
+        ontoQstArryConfidence = []
+        ontoAnsArryConfidence = []
+
+        for elemnt in ontoQstArry:
+            data = json.dumps(get_ginger_result(elemnt))
+            #FirstObj = json.loads(data, object_hook=lambda d: namedtuple('X', d.keys())(*d.values()))
+            FirstObj = json.loads(data)
+            for key in FirstObj:
+                for innerKey in FirstObj[key]:
+                    for innerInnerKey in innerKey:
+                        #print(str(innerInnerKey) + ":" + str(innerKey[innerInnerKey]))
+                        #if (isinstance(str(innerKey['Confidence']), str)):
+                        ontoQstArryConfidence.append(str(innerKey['Confidence']))
+
+        #InnerObj = FirstObj.LightGingerTheTextResult
+        for elemnt in ontoAnsArry:
+            data = json.dumps(get_ginger_result(elemnt))
+            #FirstObj = json.loads(data, object_hook=lambda d: namedtuple('X', d.keys())(*d.values()))
+            FirstObj = json.loads(data)
+            for key in FirstObj:
+                for innerKey in FirstObj[key]:
+                    for innerInnerKey in innerKey:
+                        print("check over")
+                        #print(str(innerInnerKey) + ":" + str(innerKey[innerInnerKey]))
+                        # if (isinstance(str(innerKey['Confidence']), str)):
+                        #     ontoAnsArryConfidence.append(str(innerKey['Confidence']))
+
         ArryObj = {}
         ArryObj["ontoQstArry"] = ontoQstArry
         ArryObj["ontoAnsArry"] = ontoAnsArry
-
+        ArryObj["ontoQstArryConfidence"] = ontoQstArryConfidence
+        ArryObj["ontoAnsArryConfidence"] = ontoAnsArryConfidence
         return ArryObj

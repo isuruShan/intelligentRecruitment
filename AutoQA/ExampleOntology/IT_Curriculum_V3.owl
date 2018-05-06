@@ -1,0 +1,2817 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.semanticweb.org/tharusha/ontologies/2018/0/IT_Curriculum"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://www.semanticweb.org/tharusha/ontologies/2018/0/IT_Curriculum">
+    <Prefix name="" IRI="http://www.semanticweb.org/dinithi/ontologies/2018/0/IT_Curriculum"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Declaration>
+        <Class IRI="#GlobalProfessionalPractice"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Digital_Vedio_Production"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#CybersecurityPrinciples"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#IT_IMA_Data_Organization_Architecture"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#IT_CEC_Stored_Data_Forensics"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#IT_CSP_Policy_goals_and_Mechanisms"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Human_Computer_Interaction"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#IT_SRE_Government_Role_And_Regulations"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Datamining_And_Data_Warehousing"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#IT_VSS_Server_Virtualization"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Computer_Graphics_And_Animation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#DataScalabilityAndAnalytics"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Module"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Scientific_Communication"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#IT_SRE_Global_Challenges_And_Approaches"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#IT_ANE_Storage_Area_Networks"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Advanced_Topics_In_Mathematics"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#IT_Based_Applications_With_Microcontrollers"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#IT_MAP_Performance_Issues"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Machine_Learning_And_Pattern_Recognition"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Decision_Management"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#IT_IOT_Ad_Hoc_Networks"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#IT_MAP_Servers_And_Notifications"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#IT_SDM_Platform_Based_Development"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Mobile_And_Wireless_Networks"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#IT_IDS_Fundamental_Concepts_In_Financial_Accounting"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#IT_VSS_Perspectives_And_Impact"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#IT_NET_Application_Networking_Services"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#IT_GPP_Ethical_Legal_and_Privacy_Issues"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SystemParadigms"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasKnowledgeArea"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#IT_CEC_Cloud_Security"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#IT_MAP_Views_And_Gestures"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#VirtualSystemsAndServices"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ValuePartitions"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#IT_IMA_Managing_the_Database_Environment"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Level03Module"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#IT_CEC_Network_Forensics"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#IT_IDS_Invention_innovation_and_competitive_advantage"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Operating_Systems"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#IT_SPA_Performance_Analysis"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#IT_WMS_Social_Software"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Essentials_Of_Law"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#IT_DSC_Logic"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#IT_SPA_System_Governance"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#IT_UXD_User_Advocacy"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#IT_MAP_Multiplatform_Mobile_Application_Development"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#IT_GPP_Employability_Skills_and_Careers_in_IT"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Complex_Systems_And_Agent_Technology"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#IT_NET_Perspectives_and_Impact"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Theory_Of_Computability_And_Complexity"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#IT_SRE_Goals_Plans_Tasks_Deadlines_And_Risks"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#IT_IST_Scripting_Techniques"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Financial_Accounting"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Object_Oriented_Analysis_And_Design"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#IT_GPP_Risk_Identification_and_Evaluation"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Robotics"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Theory_Of_Programming_Languages"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Business_Studies"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Advanced_Database_Management_Systems"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#IT_DSC_Minimization"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#IT_CSP_Perspectives__and_Impact"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#IT_IOT_Perspectives_And_Impact"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#IT_ANE_Applications_for_Networks"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#IT_VSS_Application_Of_Virtualization"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#IT_IOT_Intelligent_Information_Processing"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Multimedia_Programming"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Computer_Networks"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Software_Engineering_Methods"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#InformationManagement"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Fundamentals_of_Databases_And_Database_Design"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#IT_CSP_High_Assurance_Systems"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Digital_Image_Processing"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#IT_NET_Network_Management"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Mathematics"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#IT_GPP_Environmental_Issues"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#E_Business_Management"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#IT_IST_Perspectives_and_Impact"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Multimedia_Systems"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#IT_UXD_Assistive_Technologies_and_Accessibility"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#IT_IST_Data_Mapping_and_Exchange"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#IT_ANE_Mobile_Networks"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#IT_GPP_Information_Systems_Principles"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Appreciation_Of_Literary_Works"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#CloudComputing"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#PlatformTechnologies"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#IT_CSP_Reporting_Requirements"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#AppliedNetworks"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#IT_UXD_Human_Centered_Evaluation"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Big_Data_Analytics"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#IT_WMS_Perspectives_and_Impact"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Formal_Methods_And_Software_Verification"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#IT_SRE_Risk_Management"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Natural_Language_Processing"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Object_Oriented_Programming"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#CybersecurityEmergingChallenges"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#IT_IOT_Wireless_Sensor_Networks"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Computer_Architecture"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasHours"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#IT_DSA_Methods_Techniques_And_Tools"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#IT_UXD_Application_Domain_Aspects"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Cluster_Computing"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#IT_GPP_Teamwork_and_Conflict_Management"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasModuleCode"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#IT_IDS_Fundamentals_In_Economics"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Digital_Systems_And_Computer_Hardware"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#IT_IST_Integrative_Programming"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SoftwareFundamentals"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Geographic_Information_Systems"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasModuleType"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#IT_DSA_Large_Scale_Data_Challenges"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#IT_CSP_Security_Services_Mechanisms_and_Countermeasures"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Management_Information_Systems"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#NonGPA"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#IT_IOT_Automatic_Control"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#IT_SWF_Modern_App_Programming_Practices"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#IT_SWF_Concepts_and_Techniques"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#IT_CSP_Vulnerabilities_Threats_And_Risk"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#GPA"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#IT_DSA_Applications"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#IT_IDS_Fundamentals_In_Marketing"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Fundamentals_Of_Mathematics_And_Statistics"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#IT_DSC_Discrete_Information_Technology_Applications"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#IT_DSC_Combinatorics"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#IT_CCO_Using_Cloud_Computing_Applications"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasLectureHours"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Level01Module"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#IT_IMA_Data_Information_Concepts"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Marketing_Management"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#IT_CSP_Operational_Issues"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#IT_SRE_Social_Context_Of_Computing"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Supply_Chain_Management"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Advanced_Topics_In_Bioinformatics"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#IT_SRE_Sustainable_Computing"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasGradePoint"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#IT_NET_Routing_Switching_and_Internetworking"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Database_Management_Systems"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#IT_SWF_Fundamental_Data_Structures"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#IT_CEC_Personnel_And_Human_Security"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#IT_Quality_Assurance"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Innovation_Management"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#IT_GPP_Professional_Issues_and_Responsibilities"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#IT_GPP_Perspectives_and_Impact"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#IT_CEC_Social_Dimensions"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#IT_MAP_Camera_State_And_Documents_Interaction"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#IT_CSP_Malware_Fundamentals"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#IT_CCO_Development_In_The_Cloud"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Principles_Of_Economics"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Computational_Mathematics"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#IT_VSS_Storage"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#IT_DSC_Iteration_and_Recursion"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#IT_CCO_Cloud_Infrastructure_And_Data"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#IT_CSP_Cyber_Attacks_and_Detection"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#IT_DSC_Graphs_and_Trees"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Web_Technologies"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#IT_IST_Defensible_Integration"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#IT_ANE_Wireless_Networks"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#IT_MAP_2D_Graphic_And_Animation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#GradePointValuePartition"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Management_Of_Technology"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#E_Education"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#IT_GPP_IT_Governance_and_Resource_Management"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#IT_PFT_Perspectives_and_Impact"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#IT_UXD_Perspectives__and_Impact"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#IT_VSS_Network_Virtualization"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Software_Management"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#IT_WMS_Applications_Concepts"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#IT_CEC_Malware_Analysis"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#IT_CEC_Mobile_Forensics"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#IT_IMA_Data_Modeling"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#IT_PFT_Application_Execution_Environment"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#MobileApplications"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#IT_NET_Networking_and_Interconnectivity"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Computer_And_Network_Security"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Computational_Statistics"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#IT_IDS_Fundamentals_in_Law"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#IT_UXD_Effective_Interfaces"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Principles_Of_Marketing"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Management_Of_Sensitive_Projects"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SoftwareDevelopmentAndManagement"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ManagementRelated"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#IT_SPA_Operational_Domains"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Semantic_Web_And_Ontological_Modelling"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Embedded_Systems"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Knowledge_Management"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Artificial_Intelligence"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#IT_DSA_Data_Governance"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#IT_IMA_Database_Query_Languages"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#IT_SPA_System_Architecture"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Principles_Of_Management"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#IT_SPA_Operational_Activities"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#IT_SPA_Perspectives_and_Impact"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Theory_Of_Compilers"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Performance_Evaluations_Of_Computer_Networks"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#IT_VSS_Software_Cluster_Applications"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Social_Aspects_of_Information_Technology"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Level04Module"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#IT_SDM_Tools_And_Services"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#IT_CSP_Personal_Information"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#IT_SWF_Algorithm_Principles_and_Development"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#IT_SPA_Testing_and_Quality_Assurance"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#IT_CCO_Concepts_And_Fundamentals"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#IT_IOT_Iot_Architectures"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Operational_Research"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#IT_CEC_Security_Metrics"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#IT_DSC_Complexity_Analysis"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#IT_DSA_Perspectives_And_Impact"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#IT_UXD_Affective_User_Experiences"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#IT_PFT_Architecture_and_Organization"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ModuleTypeValuePartition"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#IT_CCO_Architecture"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasLabHours"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#IT_CEC_Security_Implementations"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#IT_WMS_Development_Frameworks"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#IT_WMS_Digital_Media"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#IT_CEC_Supply_Chain_And_Software_Assurance"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Advanced_Topics_In_Statistics"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#IT_IMA_Perspectives_and_Impact"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#IT_SDM_Process_Models_And_Activities"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#IT_CSP_Anonymity_Systems"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#IT_CEC_Case_Studies_And_Lessons_Learned"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#IT_IDS_Fundamentals_in_Management_Accounting"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#IT_ANE_Network_Programming"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#IT_IOT_Data_Acquisition"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#IT_SDM_Management"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#IT_ANE_Proprietary_Networks"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Financial_Engineering"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Enterprise_Applications_Development"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#IT_VSS_User_Platform_Virtualization"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Data_Communication"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#InternetOfThings"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Networking"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#IT_IST_Intersystem_Communication_Protocols"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Deep_Learning_Architecture"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#IT_DSC_Proof_Techniques"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#IT_CEC_Cyber_Physical_Systems_And_The_IoT"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#UserExperienceDesign"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Calculus_And_Statistical_Distribution"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#IT_Project_Management"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Multimedia_Technologies"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Sri_Lankan_Studies"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#IT_CSP_Cryptography_Overview"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#IT_WMS_Vulnerabilities"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Data_Structures_And_Algorithms"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#IT_SDM_Deployment_Operations_Maintenance"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#IT_GPP_Intellectual_Property"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#IT_GPP_Project_Management_Principles"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#IT_CCO_Perspectives_And_Impact"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Programming_Fundamentals"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Fuzzy_Logic"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#IT_PFT_Operating_Systems"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#IT_MAP_Perspectives_And_Impact"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#IT_SWF_Problem_Solving_Strategies"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#IT_DSC_Functions_and_Relations"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Compulsory"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Logic_Programming_And_Artificial_Cognitive_Systems"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Elective"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#IT_ANE_Routing_Protocols"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasPrerequisites"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#IT_MAP_Architectures"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#IT-KnowledgeArea"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Internetworking"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Professional_Practice"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Artificial_Neural_Networks_And_Evolutionary_Computing"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SocialResponsibility"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#High_Performance_Computing"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#IT_NET_Networking"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#IT_DSC_Sets"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasCredits"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Mathematical_Modelling"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#IT_WMS_Technologies"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Management_Accounting"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#IT_DSA_Data_Management"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#IT_NET_Foundations_of_Networking"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#IT_CCO_Security_And_Data_Considerations"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Multimedia_Communications"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Computer_Organization"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#IT_DSC_Perspectives_and_Impact"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Level02Module"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#IT_VSS_Cluster_Design_And_Administration"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#WebAndMobileSystems"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#English"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Fundamentals_Of_Bioinformatics"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#IT_IOT_Sensor_And_Actuator_Interfacing"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#IT_IOT_Iot_Application_And_Design"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#IT_UXD_Human_Factors_In_Design"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#High_Speed_Communications_Networks"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#IT_SPA_Integration_and_Deployment"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#IT_DSC_Boolean_Algebra_Principles"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Network_Programming"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#IT_IMA_Special_Purpose_Databases"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Organizational_Behavior"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#IT_PFT_Computing_Infrastructures"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#IT_CSP_Usable_Security"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#IT_GPP_Communications"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasTutorialHours"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#IT_SWF_Perspectives_and_Impact"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Information_Technology_Infrastructure_Management"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#IT_SWF_Program_Development"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#IT_NET_Physical_Layer"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#IT_IDS_Principles_Of_Management"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#IntegratedSystemsTechnology"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#IT_CSP_Mitigation_and_Recovery"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Automata_Theory"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#IT_MAP_Interface_Implementations"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#IT_SPA_Requirements"/>
+    </Declaration>
+    <EquivalentClasses>
+        <Class IRI="#GradePointValuePartition"/>
+        <ObjectUnionOf>
+            <Class IRI="#GPA"/>
+            <Class IRI="#NonGPA"/>
+        </ObjectUnionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#ModuleTypeValuePartition"/>
+        <ObjectUnionOf>
+            <Class IRI="#Compulsory"/>
+            <Class IRI="#Elective"/>
+        </ObjectUnionOf>
+    </EquivalentClasses>
+    <SubClassOf>
+        <Class IRI="#AppliedNetworks"/>
+        <Class IRI="#IT-KnowledgeArea"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CloudComputing"/>
+        <Class IRI="#IT-KnowledgeArea"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Compulsory"/>
+        <Class IRI="#ModuleTypeValuePartition"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CybersecurityEmergingChallenges"/>
+        <Class IRI="#IT-KnowledgeArea"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CybersecurityPrinciples"/>
+        <Class IRI="#IT-KnowledgeArea"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#DataScalabilityAndAnalytics"/>
+        <Class IRI="#IT-KnowledgeArea"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Elective"/>
+        <Class IRI="#ModuleTypeValuePartition"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#GPA"/>
+        <Class IRI="#GradePointValuePartition"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#GlobalProfessionalPractice"/>
+        <Class IRI="#IT-KnowledgeArea"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#GradePointValuePartition"/>
+        <Class IRI="#ValuePartitions"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#InformationManagement"/>
+        <Class IRI="#IT-KnowledgeArea"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#IntegratedSystemsTechnology"/>
+        <Class IRI="#IT-KnowledgeArea"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#InternetOfThings"/>
+        <Class IRI="#IT-KnowledgeArea"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Level01Module"/>
+        <Class IRI="#Module"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Level02Module"/>
+        <Class IRI="#Module"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Level03Module"/>
+        <Class IRI="#Module"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Level04Module"/>
+        <Class IRI="#Module"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ManagementRelated"/>
+        <Class IRI="#IT-KnowledgeArea"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Mathematics"/>
+        <Class IRI="#IT-KnowledgeArea"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MobileApplications"/>
+        <Class IRI="#IT-KnowledgeArea"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Module"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasGradePoint"/>
+            <Class IRI="#GradePointValuePartition"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Module"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasKnowledgeArea"/>
+            <Class IRI="#IT-KnowledgeArea"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Module"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasModuleType"/>
+            <Class IRI="#ModuleTypeValuePartition"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Module"/>
+        <ObjectMinCardinality cardinality="0">
+            <ObjectProperty IRI="#hasPrerequisites"/>
+            <Class IRI="#Module"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Module"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#hasCredits"/>
+            <Datatype abbreviatedIRI="xsd:decimal"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Module"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#hasHours"/>
+            <Datatype abbreviatedIRI="xsd:int"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Module"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#hasModuleCode"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ModuleTypeValuePartition"/>
+        <Class IRI="#ValuePartitions"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Networking"/>
+        <Class IRI="#IT-KnowledgeArea"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#NonGPA"/>
+        <Class IRI="#GradePointValuePartition"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PlatformTechnologies"/>
+        <Class IRI="#IT-KnowledgeArea"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SocialResponsibility"/>
+        <Class IRI="#IT-KnowledgeArea"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SoftwareDevelopmentAndManagement"/>
+        <Class IRI="#IT-KnowledgeArea"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SoftwareFundamentals"/>
+        <Class IRI="#IT-KnowledgeArea"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SystemParadigms"/>
+        <Class IRI="#IT-KnowledgeArea"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#UserExperienceDesign"/>
+        <Class IRI="#IT-KnowledgeArea"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#VirtualSystemsAndServices"/>
+        <Class IRI="#IT-KnowledgeArea"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#WebAndMobileSystems"/>
+        <Class IRI="#IT-KnowledgeArea"/>
+    </SubClassOf>
+    <DisjointClasses>
+        <Class IRI="#Compulsory"/>
+        <Class IRI="#Elective"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#GPA"/>
+        <Class IRI="#NonGPA"/>
+    </DisjointClasses>
+    <ClassAssertion>
+        <Class IRI="#Level03Module"/>
+        <NamedIndividual IRI="#Advanced_Database_Management_Systems"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Level04Module"/>
+        <NamedIndividual IRI="#Advanced_Topics_In_Bioinformatics"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Level04Module"/>
+        <NamedIndividual IRI="#Advanced_Topics_In_Mathematics"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Level04Module"/>
+        <NamedIndividual IRI="#Advanced_Topics_In_Statistics"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Level04Module"/>
+        <NamedIndividual IRI="#Appreciation_Of_Literary_Works"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Level03Module"/>
+        <NamedIndividual IRI="#Artificial_Intelligence"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Level04Module"/>
+        <NamedIndividual IRI="#Artificial_Neural_Networks_And_Evolutionary_Computing"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Level03Module"/>
+        <NamedIndividual IRI="#Automata_Theory"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Level04Module"/>
+        <NamedIndividual IRI="#Big_Data_Analytics"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Level04Module"/>
+        <NamedIndividual IRI="#Business_Studies"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Level02Module"/>
+        <NamedIndividual IRI="#Calculus_And_Statistical_Distribution"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Level04Module"/>
+        <NamedIndividual IRI="#Cluster_Computing"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Level04Module"/>
+        <NamedIndividual IRI="#Complex_Systems_And_Agent_Technology"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Level03Module"/>
+        <NamedIndividual IRI="#Computational_Mathematics"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Level03Module"/>
+        <NamedIndividual IRI="#Computational_Statistics"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Level04Module"/>
+        <NamedIndividual IRI="#Computer_And_Network_Security"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Level02Module"/>
+        <NamedIndividual IRI="#Computer_Architecture"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Level02Module"/>
+        <NamedIndividual IRI="#Computer_Graphics_And_Animation"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Level02Module"/>
+        <NamedIndividual IRI="#Computer_Networks"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Level01Module"/>
+        <NamedIndividual IRI="#Computer_Organization"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Level01Module"/>
+        <NamedIndividual IRI="#Data_Communication"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Level02Module"/>
+        <NamedIndividual IRI="#Data_Structures_And_Algorithms"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Level02Module"/>
+        <NamedIndividual IRI="#Database_Management_Systems"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Level04Module"/>
+        <NamedIndividual IRI="#Datamining_And_Data_Warehousing"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Level04Module"/>
+        <NamedIndividual IRI="#Decision_Management"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Level04Module"/>
+        <NamedIndividual IRI="#Deep_Learning_Architecture"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Level04Module"/>
+        <NamedIndividual IRI="#Digital_Image_Processing"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Level01Module"/>
+        <NamedIndividual IRI="#Digital_Systems_And_Computer_Hardware"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Level03Module"/>
+        <NamedIndividual IRI="#Digital_Vedio_Production"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Level04Module"/>
+        <NamedIndividual IRI="#E_Business_Management"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Level04Module"/>
+        <NamedIndividual IRI="#E_Education"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Level04Module"/>
+        <NamedIndividual IRI="#Embedded_Systems"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Level01Module"/>
+        <NamedIndividual IRI="#English"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Level03Module"/>
+        <NamedIndividual IRI="#Enterprise_Applications_Development"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Level02Module"/>
+        <NamedIndividual IRI="#Essentials_Of_Law"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Level01Module"/>
+        <NamedIndividual IRI="#Financial_Accounting"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Level04Module"/>
+        <NamedIndividual IRI="#Financial_Engineering"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Level04Module"/>
+        <NamedIndividual IRI="#Formal_Methods_And_Software_Verification"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Level03Module"/>
+        <NamedIndividual IRI="#Fundamentals_Of_Bioinformatics"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Level01Module"/>
+        <NamedIndividual IRI="#Fundamentals_Of_Mathematics_And_Statistics"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Level01Module"/>
+        <NamedIndividual IRI="#Fundamentals_of_Databases_And_Database_Design"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Level04Module"/>
+        <NamedIndividual IRI="#Fuzzy_Logic"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Level04Module"/>
+        <NamedIndividual IRI="#Geographic_Information_Systems"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Level04Module"/>
+        <NamedIndividual IRI="#High_Performance_Computing"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Level04Module"/>
+        <NamedIndividual IRI="#High_Speed_Communications_Networks"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Level04Module"/>
+        <NamedIndividual IRI="#Human_Computer_Interaction"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#AppliedNetworks"/>
+        <NamedIndividual IRI="#IT_ANE_Applications_for_Networks"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#AppliedNetworks"/>
+        <NamedIndividual IRI="#IT_ANE_Mobile_Networks"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#AppliedNetworks"/>
+        <NamedIndividual IRI="#IT_ANE_Network_Programming"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#AppliedNetworks"/>
+        <NamedIndividual IRI="#IT_ANE_Proprietary_Networks"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#AppliedNetworks"/>
+        <NamedIndividual IRI="#IT_ANE_Routing_Protocols"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#AppliedNetworks"/>
+        <NamedIndividual IRI="#IT_ANE_Storage_Area_Networks"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#AppliedNetworks"/>
+        <NamedIndividual IRI="#IT_ANE_Wireless_Networks"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Level04Module"/>
+        <NamedIndividual IRI="#IT_Based_Applications_With_Microcontrollers"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#CloudComputing"/>
+        <NamedIndividual IRI="#IT_CCO_Architecture"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#CloudComputing"/>
+        <NamedIndividual IRI="#IT_CCO_Cloud_Infrastructure_And_Data"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#CloudComputing"/>
+        <NamedIndividual IRI="#IT_CCO_Concepts_And_Fundamentals"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#CloudComputing"/>
+        <NamedIndividual IRI="#IT_CCO_Development_In_The_Cloud"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#CloudComputing"/>
+        <NamedIndividual IRI="#IT_CCO_Perspectives_And_Impact"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#CloudComputing"/>
+        <NamedIndividual IRI="#IT_CCO_Security_And_Data_Considerations"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#CloudComputing"/>
+        <NamedIndividual IRI="#IT_CCO_Using_Cloud_Computing_Applications"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#CybersecurityEmergingChallenges"/>
+        <NamedIndividual IRI="#IT_CEC_Case_Studies_And_Lessons_Learned"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#CybersecurityEmergingChallenges"/>
+        <NamedIndividual IRI="#IT_CEC_Cloud_Security"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#CybersecurityEmergingChallenges"/>
+        <NamedIndividual IRI="#IT_CEC_Cyber_Physical_Systems_And_The_IoT"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#CybersecurityEmergingChallenges"/>
+        <NamedIndividual IRI="#IT_CEC_Malware_Analysis"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#CybersecurityEmergingChallenges"/>
+        <NamedIndividual IRI="#IT_CEC_Mobile_Forensics"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#CybersecurityEmergingChallenges"/>
+        <NamedIndividual IRI="#IT_CEC_Network_Forensics"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#CybersecurityEmergingChallenges"/>
+        <NamedIndividual IRI="#IT_CEC_Personnel_And_Human_Security"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#CybersecurityEmergingChallenges"/>
+        <NamedIndividual IRI="#IT_CEC_Security_Implementations"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#CybersecurityEmergingChallenges"/>
+        <NamedIndividual IRI="#IT_CEC_Security_Metrics"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#CybersecurityEmergingChallenges"/>
+        <NamedIndividual IRI="#IT_CEC_Social_Dimensions"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#CybersecurityEmergingChallenges"/>
+        <NamedIndividual IRI="#IT_CEC_Stored_Data_Forensics"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#CybersecurityEmergingChallenges"/>
+        <NamedIndividual IRI="#IT_CEC_Supply_Chain_And_Software_Assurance"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#CybersecurityPrinciples"/>
+        <NamedIndividual IRI="#IT_CSP_Anonymity_Systems"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#CybersecurityPrinciples"/>
+        <NamedIndividual IRI="#IT_CSP_Cryptography_Overview"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#CybersecurityPrinciples"/>
+        <NamedIndividual IRI="#IT_CSP_Cyber_Attacks_and_Detection"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#CybersecurityPrinciples"/>
+        <NamedIndividual IRI="#IT_CSP_High_Assurance_Systems"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#CybersecurityPrinciples"/>
+        <NamedIndividual IRI="#IT_CSP_Malware_Fundamentals"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#CybersecurityPrinciples"/>
+        <NamedIndividual IRI="#IT_CSP_Mitigation_and_Recovery"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#CybersecurityPrinciples"/>
+        <NamedIndividual IRI="#IT_CSP_Operational_Issues"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#CybersecurityPrinciples"/>
+        <NamedIndividual IRI="#IT_CSP_Personal_Information"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#CybersecurityPrinciples"/>
+        <NamedIndividual IRI="#IT_CSP_Perspectives__and_Impact"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#CybersecurityPrinciples"/>
+        <NamedIndividual IRI="#IT_CSP_Policy_goals_and_Mechanisms"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#CybersecurityPrinciples"/>
+        <NamedIndividual IRI="#IT_CSP_Reporting_Requirements"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#CybersecurityPrinciples"/>
+        <NamedIndividual IRI="#IT_CSP_Security_Services_Mechanisms_and_Countermeasures"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#CybersecurityPrinciples"/>
+        <NamedIndividual IRI="#IT_CSP_Usable_Security"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#CybersecurityPrinciples"/>
+        <NamedIndividual IRI="#IT_CSP_Vulnerabilities_Threats_And_Risk"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#DataScalabilityAndAnalytics"/>
+        <NamedIndividual IRI="#IT_DSA_Applications"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#DataScalabilityAndAnalytics"/>
+        <NamedIndividual IRI="#IT_DSA_Data_Governance"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#DataScalabilityAndAnalytics"/>
+        <NamedIndividual IRI="#IT_DSA_Data_Management"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#DataScalabilityAndAnalytics"/>
+        <NamedIndividual IRI="#IT_DSA_Large_Scale_Data_Challenges"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#DataScalabilityAndAnalytics"/>
+        <NamedIndividual IRI="#IT_DSA_Methods_Techniques_And_Tools"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#DataScalabilityAndAnalytics"/>
+        <NamedIndividual IRI="#IT_DSA_Perspectives_And_Impact"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Mathematics"/>
+        <NamedIndividual IRI="#IT_DSC_Boolean_Algebra_Principles"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Mathematics"/>
+        <NamedIndividual IRI="#IT_DSC_Combinatorics"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Mathematics"/>
+        <NamedIndividual IRI="#IT_DSC_Complexity_Analysis"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Mathematics"/>
+        <NamedIndividual IRI="#IT_DSC_Discrete_Information_Technology_Applications"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Mathematics"/>
+        <NamedIndividual IRI="#IT_DSC_Functions_and_Relations"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Mathematics"/>
+        <NamedIndividual IRI="#IT_DSC_Graphs_and_Trees"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Mathematics"/>
+        <NamedIndividual IRI="#IT_DSC_Iteration_and_Recursion"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Mathematics"/>
+        <NamedIndividual IRI="#IT_DSC_Logic"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Mathematics"/>
+        <NamedIndividual IRI="#IT_DSC_Minimization"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Mathematics"/>
+        <NamedIndividual IRI="#IT_DSC_Perspectives_and_Impact"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Mathematics"/>
+        <NamedIndividual IRI="#IT_DSC_Proof_Techniques"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Mathematics"/>
+        <NamedIndividual IRI="#IT_DSC_Sets"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#GlobalProfessionalPractice"/>
+        <NamedIndividual IRI="#IT_GPP_Communications"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#GlobalProfessionalPractice"/>
+        <NamedIndividual IRI="#IT_GPP_Employability_Skills_and_Careers_in_IT"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#GlobalProfessionalPractice"/>
+        <NamedIndividual IRI="#IT_GPP_Environmental_Issues"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#GlobalProfessionalPractice"/>
+        <NamedIndividual IRI="#IT_GPP_Ethical_Legal_and_Privacy_Issues"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#GlobalProfessionalPractice"/>
+        <NamedIndividual IRI="#IT_GPP_IT_Governance_and_Resource_Management"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#GlobalProfessionalPractice"/>
+        <NamedIndividual IRI="#IT_GPP_Information_Systems_Principles"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#GlobalProfessionalPractice"/>
+        <NamedIndividual IRI="#IT_GPP_Intellectual_Property"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#GlobalProfessionalPractice"/>
+        <NamedIndividual IRI="#IT_GPP_Perspectives_and_Impact"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#GlobalProfessionalPractice"/>
+        <NamedIndividual IRI="#IT_GPP_Professional_Issues_and_Responsibilities"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#GlobalProfessionalPractice"/>
+        <NamedIndividual IRI="#IT_GPP_Project_Management_Principles"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#GlobalProfessionalPractice"/>
+        <NamedIndividual IRI="#IT_GPP_Risk_Identification_and_Evaluation"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#GlobalProfessionalPractice"/>
+        <NamedIndividual IRI="#IT_GPP_Teamwork_and_Conflict_Management"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ManagementRelated"/>
+        <NamedIndividual IRI="#IT_IDS_Fundamental_Concepts_In_Financial_Accounting"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ManagementRelated"/>
+        <NamedIndividual IRI="#IT_IDS_Fundamentals_In_Economics"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ManagementRelated"/>
+        <NamedIndividual IRI="#IT_IDS_Fundamentals_In_Marketing"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ManagementRelated"/>
+        <NamedIndividual IRI="#IT_IDS_Fundamentals_in_Law"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ManagementRelated"/>
+        <NamedIndividual IRI="#IT_IDS_Fundamentals_in_Management_Accounting"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ManagementRelated"/>
+        <NamedIndividual IRI="#IT_IDS_Invention_innovation_and_competitive_advantage"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ManagementRelated"/>
+        <NamedIndividual IRI="#IT_IDS_Principles_Of_Management"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#InformationManagement"/>
+        <NamedIndividual IRI="#IT_IMA_Data_Information_Concepts"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#InformationManagement"/>
+        <NamedIndividual IRI="#IT_IMA_Data_Modeling"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#InformationManagement"/>
+        <NamedIndividual IRI="#IT_IMA_Data_Organization_Architecture"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#InformationManagement"/>
+        <NamedIndividual IRI="#IT_IMA_Database_Query_Languages"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#InformationManagement"/>
+        <NamedIndividual IRI="#IT_IMA_Managing_the_Database_Environment"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#InformationManagement"/>
+        <NamedIndividual IRI="#IT_IMA_Perspectives_and_Impact"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#InformationManagement"/>
+        <NamedIndividual IRI="#IT_IMA_Special_Purpose_Databases"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#InternetOfThings"/>
+        <NamedIndividual IRI="#IT_IOT_Ad_Hoc_Networks"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#InternetOfThings"/>
+        <NamedIndividual IRI="#IT_IOT_Automatic_Control"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#InternetOfThings"/>
+        <NamedIndividual IRI="#IT_IOT_Data_Acquisition"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#InternetOfThings"/>
+        <NamedIndividual IRI="#IT_IOT_Intelligent_Information_Processing"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#InternetOfThings"/>
+        <NamedIndividual IRI="#IT_IOT_Iot_Application_And_Design"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#InternetOfThings"/>
+        <NamedIndividual IRI="#IT_IOT_Iot_Architectures"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#InternetOfThings"/>
+        <NamedIndividual IRI="#IT_IOT_Perspectives_And_Impact"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#InternetOfThings"/>
+        <NamedIndividual IRI="#IT_IOT_Sensor_And_Actuator_Interfacing"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#InternetOfThings"/>
+        <NamedIndividual IRI="#IT_IOT_Wireless_Sensor_Networks"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#IntegratedSystemsTechnology"/>
+        <NamedIndividual IRI="#IT_IST_Data_Mapping_and_Exchange"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#IntegratedSystemsTechnology"/>
+        <NamedIndividual IRI="#IT_IST_Defensible_Integration"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#IntegratedSystemsTechnology"/>
+        <NamedIndividual IRI="#IT_IST_Integrative_Programming"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#IntegratedSystemsTechnology"/>
+        <NamedIndividual IRI="#IT_IST_Intersystem_Communication_Protocols"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#IntegratedSystemsTechnology"/>
+        <NamedIndividual IRI="#IT_IST_Perspectives_and_Impact"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#IntegratedSystemsTechnology"/>
+        <NamedIndividual IRI="#IT_IST_Scripting_Techniques"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#MobileApplications"/>
+        <NamedIndividual IRI="#IT_MAP_2D_Graphic_And_Animation"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#MobileApplications"/>
+        <NamedIndividual IRI="#IT_MAP_Architectures"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#MobileApplications"/>
+        <NamedIndividual IRI="#IT_MAP_Camera_State_And_Documents_Interaction"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#MobileApplications"/>
+        <NamedIndividual IRI="#IT_MAP_Interface_Implementations"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#MobileApplications"/>
+        <NamedIndividual IRI="#IT_MAP_Multiplatform_Mobile_Application_Development"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#MobileApplications"/>
+        <NamedIndividual IRI="#IT_MAP_Performance_Issues"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#MobileApplications"/>
+        <NamedIndividual IRI="#IT_MAP_Perspectives_And_Impact"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#MobileApplications"/>
+        <NamedIndividual IRI="#IT_MAP_Servers_And_Notifications"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#MobileApplications"/>
+        <NamedIndividual IRI="#IT_MAP_Views_And_Gestures"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Networking"/>
+        <NamedIndividual IRI="#IT_NET_Application_Networking_Services"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Networking"/>
+        <NamedIndividual IRI="#IT_NET_Foundations_of_Networking"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Networking"/>
+        <NamedIndividual IRI="#IT_NET_Network_Management"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Networking"/>
+        <NamedIndividual IRI="#IT_NET_Networking"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Networking"/>
+        <NamedIndividual IRI="#IT_NET_Networking_and_Interconnectivity"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Networking"/>
+        <NamedIndividual IRI="#IT_NET_Perspectives_and_Impact"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Networking"/>
+        <NamedIndividual IRI="#IT_NET_Physical_Layer"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Networking"/>
+        <NamedIndividual IRI="#IT_NET_Routing_Switching_and_Internetworking"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#PlatformTechnologies"/>
+        <NamedIndividual IRI="#IT_PFT_Application_Execution_Environment"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#PlatformTechnologies"/>
+        <NamedIndividual IRI="#IT_PFT_Architecture_and_Organization"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#PlatformTechnologies"/>
+        <NamedIndividual IRI="#IT_PFT_Computing_Infrastructures"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#PlatformTechnologies"/>
+        <NamedIndividual IRI="#IT_PFT_Operating_Systems"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#PlatformTechnologies"/>
+        <NamedIndividual IRI="#IT_PFT_Perspectives_and_Impact"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Level03Module"/>
+        <NamedIndividual IRI="#IT_Project_Management"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Level03Module"/>
+        <NamedIndividual IRI="#IT_Quality_Assurance"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#SoftwareDevelopmentAndManagement"/>
+        <NamedIndividual IRI="#IT_SDM_Deployment_Operations_Maintenance"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#SoftwareDevelopmentAndManagement"/>
+        <NamedIndividual IRI="#IT_SDM_Management"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#SoftwareDevelopmentAndManagement"/>
+        <NamedIndividual IRI="#IT_SDM_Platform_Based_Development"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#SoftwareDevelopmentAndManagement"/>
+        <NamedIndividual IRI="#IT_SDM_Process_Models_And_Activities"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#SoftwareDevelopmentAndManagement"/>
+        <NamedIndividual IRI="#IT_SDM_Tools_And_Services"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#SystemParadigms"/>
+        <NamedIndividual IRI="#IT_SPA_Integration_and_Deployment"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#SystemParadigms"/>
+        <NamedIndividual IRI="#IT_SPA_Operational_Activities"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#SystemParadigms"/>
+        <NamedIndividual IRI="#IT_SPA_Operational_Domains"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#SystemParadigms"/>
+        <NamedIndividual IRI="#IT_SPA_Performance_Analysis"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#SystemParadigms"/>
+        <NamedIndividual IRI="#IT_SPA_Perspectives_and_Impact"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#SystemParadigms"/>
+        <NamedIndividual IRI="#IT_SPA_Requirements"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#SystemParadigms"/>
+        <NamedIndividual IRI="#IT_SPA_System_Architecture"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#SystemParadigms"/>
+        <NamedIndividual IRI="#IT_SPA_System_Governance"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#SystemParadigms"/>
+        <NamedIndividual IRI="#IT_SPA_Testing_and_Quality_Assurance"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#SocialResponsibility"/>
+        <NamedIndividual IRI="#IT_SRE_Global_Challenges_And_Approaches"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#SocialResponsibility"/>
+        <NamedIndividual IRI="#IT_SRE_Goals_Plans_Tasks_Deadlines_And_Risks"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#SocialResponsibility"/>
+        <NamedIndividual IRI="#IT_SRE_Government_Role_And_Regulations"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#SocialResponsibility"/>
+        <NamedIndividual IRI="#IT_SRE_Risk_Management"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#SocialResponsibility"/>
+        <NamedIndividual IRI="#IT_SRE_Social_Context_Of_Computing"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#SocialResponsibility"/>
+        <NamedIndividual IRI="#IT_SRE_Sustainable_Computing"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#SoftwareFundamentals"/>
+        <NamedIndividual IRI="#IT_SWF_Algorithm_Principles_and_Development"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#SoftwareFundamentals"/>
+        <NamedIndividual IRI="#IT_SWF_Concepts_and_Techniques"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#SoftwareFundamentals"/>
+        <NamedIndividual IRI="#IT_SWF_Fundamental_Data_Structures"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#SoftwareFundamentals"/>
+        <NamedIndividual IRI="#IT_SWF_Modern_App_Programming_Practices"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#SoftwareFundamentals"/>
+        <NamedIndividual IRI="#IT_SWF_Perspectives_and_Impact"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#SoftwareFundamentals"/>
+        <NamedIndividual IRI="#IT_SWF_Problem_Solving_Strategies"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#SoftwareFundamentals"/>
+        <NamedIndividual IRI="#IT_SWF_Program_Development"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#UserExperienceDesign"/>
+        <NamedIndividual IRI="#IT_UXD_Affective_User_Experiences"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#UserExperienceDesign"/>
+        <NamedIndividual IRI="#IT_UXD_Application_Domain_Aspects"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#UserExperienceDesign"/>
+        <NamedIndividual IRI="#IT_UXD_Assistive_Technologies_and_Accessibility"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#UserExperienceDesign"/>
+        <NamedIndividual IRI="#IT_UXD_Effective_Interfaces"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#UserExperienceDesign"/>
+        <NamedIndividual IRI="#IT_UXD_Human_Centered_Evaluation"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#UserExperienceDesign"/>
+        <NamedIndividual IRI="#IT_UXD_Human_Factors_In_Design"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#UserExperienceDesign"/>
+        <NamedIndividual IRI="#IT_UXD_Perspectives__and_Impact"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#UserExperienceDesign"/>
+        <NamedIndividual IRI="#IT_UXD_User_Advocacy"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#VirtualSystemsAndServices"/>
+        <NamedIndividual IRI="#IT_VSS_Application_Of_Virtualization"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#VirtualSystemsAndServices"/>
+        <NamedIndividual IRI="#IT_VSS_Cluster_Design_And_Administration"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#VirtualSystemsAndServices"/>
+        <NamedIndividual IRI="#IT_VSS_Network_Virtualization"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#VirtualSystemsAndServices"/>
+        <NamedIndividual IRI="#IT_VSS_Perspectives_And_Impact"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#VirtualSystemsAndServices"/>
+        <NamedIndividual IRI="#IT_VSS_Server_Virtualization"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#VirtualSystemsAndServices"/>
+        <NamedIndividual IRI="#IT_VSS_Software_Cluster_Applications"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#VirtualSystemsAndServices"/>
+        <NamedIndividual IRI="#IT_VSS_Storage"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#VirtualSystemsAndServices"/>
+        <NamedIndividual IRI="#IT_VSS_User_Platform_Virtualization"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#WebAndMobileSystems"/>
+        <NamedIndividual IRI="#IT_WMS_Applications_Concepts"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#WebAndMobileSystems"/>
+        <NamedIndividual IRI="#IT_WMS_Development_Frameworks"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#WebAndMobileSystems"/>
+        <NamedIndividual IRI="#IT_WMS_Digital_Media"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#WebAndMobileSystems"/>
+        <NamedIndividual IRI="#IT_WMS_Perspectives_and_Impact"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#WebAndMobileSystems"/>
+        <NamedIndividual IRI="#IT_WMS_Social_Software"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#WebAndMobileSystems"/>
+        <NamedIndividual IRI="#IT_WMS_Technologies"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#WebAndMobileSystems"/>
+        <NamedIndividual IRI="#IT_WMS_Vulnerabilities"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Level04Module"/>
+        <NamedIndividual IRI="#Information_Technology_Infrastructure_Management"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Level04Module"/>
+        <NamedIndividual IRI="#Innovation_Management"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Level03Module"/>
+        <NamedIndividual IRI="#Internetworking"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Level04Module"/>
+        <NamedIndividual IRI="#Knowledge_Management"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Level03Module"/>
+        <NamedIndividual IRI="#Logic_Programming_And_Artificial_Cognitive_Systems"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Level04Module"/>
+        <NamedIndividual IRI="#Machine_Learning_And_Pattern_Recognition"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Level02Module"/>
+        <NamedIndividual IRI="#Management_Accounting"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Level03Module"/>
+        <NamedIndividual IRI="#Management_Information_Systems"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Level04Module"/>
+        <NamedIndividual IRI="#Management_Of_Sensitive_Projects"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Level04Module"/>
+        <NamedIndividual IRI="#Management_Of_Technology"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Level04Module"/>
+        <NamedIndividual IRI="#Marketing_Management"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Level04Module"/>
+        <NamedIndividual IRI="#Mathematical_Modelling"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Level04Module"/>
+        <NamedIndividual IRI="#Mobile_And_Wireless_Networks"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Level04Module"/>
+        <NamedIndividual IRI="#Multimedia_Communications"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Level04Module"/>
+        <NamedIndividual IRI="#Multimedia_Programming"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Level04Module"/>
+        <NamedIndividual IRI="#Multimedia_Systems"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Level01Module"/>
+        <NamedIndividual IRI="#Multimedia_Technologies"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Level04Module"/>
+        <NamedIndividual IRI="#Natural_Language_Processing"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Level04Module"/>
+        <NamedIndividual IRI="#Network_Programming"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Level02Module"/>
+        <NamedIndividual IRI="#Object_Oriented_Analysis_And_Design"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Level02Module"/>
+        <NamedIndividual IRI="#Object_Oriented_Programming"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Level02Module"/>
+        <NamedIndividual IRI="#Operating_Systems"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Level04Module"/>
+        <NamedIndividual IRI="#Operational_Research"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Level03Module"/>
+        <NamedIndividual IRI="#Organizational_Behavior"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Level04Module"/>
+        <NamedIndividual IRI="#Performance_Evaluations_Of_Computer_Networks"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Level01Module"/>
+        <NamedIndividual IRI="#Principles_Of_Economics"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Level01Module"/>
+        <NamedIndividual IRI="#Principles_Of_Management"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Level02Module"/>
+        <NamedIndividual IRI="#Principles_Of_Marketing"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Level04Module"/>
+        <NamedIndividual IRI="#Professional_Practice"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Level01Module"/>
+        <NamedIndividual IRI="#Programming_Fundamentals"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Level04Module"/>
+        <NamedIndividual IRI="#Robotics"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Level02Module"/>
+        <NamedIndividual IRI="#Scientific_Communication"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Level04Module"/>
+        <NamedIndividual IRI="#Semantic_Web_And_Ontological_Modelling"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Level03Module"/>
+        <NamedIndividual IRI="#Social_Aspects_of_Information_Technology"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Level02Module"/>
+        <NamedIndividual IRI="#Software_Engineering_Methods"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Level03Module"/>
+        <NamedIndividual IRI="#Software_Management"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Level01Module"/>
+        <NamedIndividual IRI="#Sri_Lankan_Studies"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Level04Module"/>
+        <NamedIndividual IRI="#Supply_Chain_Management"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Level04Module"/>
+        <NamedIndividual IRI="#Theory_Of_Compilers"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Level04Module"/>
+        <NamedIndividual IRI="#Theory_Of_Computability_And_Complexity"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Level04Module"/>
+        <NamedIndividual IRI="#Theory_Of_Programming_Languages"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Level01Module"/>
+        <NamedIndividual IRI="#Web_Technologies"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasKnowledgeArea"/>
+        <NamedIndividual IRI="#Advanced_Database_Management_Systems"/>
+        <NamedIndividual IRI="#IT_IMA_Data_Organization_Architecture"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasKnowledgeArea"/>
+        <NamedIndividual IRI="#Advanced_Database_Management_Systems"/>
+        <NamedIndividual IRI="#IT_IMA_Special_Purpose_Databases"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasKnowledgeArea"/>
+        <NamedIndividual IRI="#Advanced_Topics_In_Mathematics"/>
+        <NamedIndividual IRI="#IT_DSC_Boolean_Algebra_Principles"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasKnowledgeArea"/>
+        <NamedIndividual IRI="#Advanced_Topics_In_Mathematics"/>
+        <NamedIndividual IRI="#IT_DSC_Complexity_Analysis"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasKnowledgeArea"/>
+        <NamedIndividual IRI="#Advanced_Topics_In_Mathematics"/>
+        <NamedIndividual IRI="#IT_DSC_Functions_and_Relations"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasKnowledgeArea"/>
+        <NamedIndividual IRI="#Advanced_Topics_In_Statistics"/>
+        <NamedIndividual IRI="#IT_DSC_Boolean_Algebra_Principles"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasKnowledgeArea"/>
+        <NamedIndividual IRI="#Artificial_Intelligence"/>
+        <NamedIndividual IRI="#IT_DSC_Boolean_Algebra_Principles"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasKnowledgeArea"/>
+        <NamedIndividual IRI="#Artificial_Intelligence"/>
+        <NamedIndividual IRI="#IT_DSC_Logic"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasKnowledgeArea"/>
+        <NamedIndividual IRI="#Artificial_Neural_Networks_And_Evolutionary_Computing"/>
+        <NamedIndividual IRI="#IT_DSC_Boolean_Algebra_Principles"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasKnowledgeArea"/>
+        <NamedIndividual IRI="#Artificial_Neural_Networks_And_Evolutionary_Computing"/>
+        <NamedIndividual IRI="#IT_DSC_Logic"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasKnowledgeArea"/>
+        <NamedIndividual IRI="#Big_Data_Analytics"/>
+        <NamedIndividual IRI="#IT_DSA_Large_Scale_Data_Challenges"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasKnowledgeArea"/>
+        <NamedIndividual IRI="#Big_Data_Analytics"/>
+        <NamedIndividual IRI="#IT_DSA_Methods_Techniques_And_Tools"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasKnowledgeArea"/>
+        <NamedIndividual IRI="#Big_Data_Analytics"/>
+        <NamedIndividual IRI="#IT_DSA_Perspectives_And_Impact"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasKnowledgeArea"/>
+        <NamedIndividual IRI="#Calculus_And_Statistical_Distribution"/>
+        <NamedIndividual IRI="#IT_DSC_Boolean_Algebra_Principles"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasKnowledgeArea"/>
+        <NamedIndividual IRI="#Cluster_Computing"/>
+        <NamedIndividual IRI="#IT_VSS_Cluster_Design_And_Administration"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasKnowledgeArea"/>
+        <NamedIndividual IRI="#Cluster_Computing"/>
+        <NamedIndividual IRI="#IT_VSS_Software_Cluster_Applications"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasKnowledgeArea"/>
+        <NamedIndividual IRI="#Computational_Mathematics"/>
+        <NamedIndividual IRI="#IT_DSC_Boolean_Algebra_Principles"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasKnowledgeArea"/>
+        <NamedIndividual IRI="#Computational_Mathematics"/>
+        <NamedIndividual IRI="#IT_DSC_Complexity_Analysis"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasKnowledgeArea"/>
+        <NamedIndividual IRI="#Computational_Mathematics"/>
+        <NamedIndividual IRI="#IT_DSC_Functions_and_Relations"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasKnowledgeArea"/>
+        <NamedIndividual IRI="#Computer_And_Network_Security"/>
+        <NamedIndividual IRI="#IT_CSP_Cryptography_Overview"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasKnowledgeArea"/>
+        <NamedIndividual IRI="#Computer_And_Network_Security"/>
+        <NamedIndividual IRI="#IT_CSP_Perspectives__and_Impact"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasKnowledgeArea"/>
+        <NamedIndividual IRI="#Computer_And_Network_Security"/>
+        <NamedIndividual IRI="#IT_CSP_Security_Services_Mechanisms_and_Countermeasures"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasKnowledgeArea"/>
+        <NamedIndividual IRI="#Computer_Architecture"/>
+        <NamedIndividual IRI="#IT_PFT_Architecture_and_Organization"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasKnowledgeArea"/>
+        <NamedIndividual IRI="#Computer_Architecture"/>
+        <NamedIndividual IRI="#IT_PFT_Computing_Infrastructures"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasKnowledgeArea"/>
+        <NamedIndividual IRI="#Computer_Graphics_And_Animation"/>
+        <NamedIndividual IRI="#IT_MAP_2D_Graphic_And_Animation"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasKnowledgeArea"/>
+        <NamedIndividual IRI="#Computer_Networks"/>
+        <NamedIndividual IRI="#IT_NET_Foundations_of_Networking"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasKnowledgeArea"/>
+        <NamedIndividual IRI="#Computer_Networks"/>
+        <NamedIndividual IRI="#IT_NET_Networking_and_Interconnectivity"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasKnowledgeArea"/>
+        <NamedIndividual IRI="#Computer_Networks"/>
+        <NamedIndividual IRI="#IT_NET_Perspectives_and_Impact"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasKnowledgeArea"/>
+        <NamedIndividual IRI="#Computer_Networks"/>
+        <NamedIndividual IRI="#IT_NET_Routing_Switching_and_Internetworking"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasKnowledgeArea"/>
+        <NamedIndividual IRI="#Computer_Organization"/>
+        <NamedIndividual IRI="#IT_PFT_Architecture_and_Organization"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasKnowledgeArea"/>
+        <NamedIndividual IRI="#Computer_Organization"/>
+        <NamedIndividual IRI="#IT_PFT_Perspectives_and_Impact"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasKnowledgeArea"/>
+        <NamedIndividual IRI="#Data_Communication"/>
+        <NamedIndividual IRI="#IT_NET_Application_Networking_Services"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasKnowledgeArea"/>
+        <NamedIndividual IRI="#Data_Communication"/>
+        <NamedIndividual IRI="#IT_NET_Physical_Layer"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasKnowledgeArea"/>
+        <NamedIndividual IRI="#Data_Structures_And_Algorithms"/>
+        <NamedIndividual IRI="#IT_SWF_Algorithm_Principles_and_Development"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasKnowledgeArea"/>
+        <NamedIndividual IRI="#Data_Structures_And_Algorithms"/>
+        <NamedIndividual IRI="#IT_SWF_Fundamental_Data_Structures"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasKnowledgeArea"/>
+        <NamedIndividual IRI="#Database_Management_Systems"/>
+        <NamedIndividual IRI="#IT_IMA_Data_Organization_Architecture"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasKnowledgeArea"/>
+        <NamedIndividual IRI="#Database_Management_Systems"/>
+        <NamedIndividual IRI="#IT_IMA_Managing_the_Database_Environment"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasKnowledgeArea"/>
+        <NamedIndividual IRI="#Datamining_And_Data_Warehousing"/>
+        <NamedIndividual IRI="#IT_DSA_Data_Governance"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasKnowledgeArea"/>
+        <NamedIndividual IRI="#Datamining_And_Data_Warehousing"/>
+        <NamedIndividual IRI="#IT_DSA_Data_Management"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasKnowledgeArea"/>
+        <NamedIndividual IRI="#Datamining_And_Data_Warehousing"/>
+        <NamedIndividual IRI="#IT_DSA_Perspectives_And_Impact"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasKnowledgeArea"/>
+        <NamedIndividual IRI="#Digital_Image_Processing"/>
+        <NamedIndividual IRI="#IT_DSC_Functions_and_Relations"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasKnowledgeArea"/>
+        <NamedIndividual IRI="#Digital_Vedio_Production"/>
+        <NamedIndividual IRI="#IT_WMS_Development_Frameworks"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasKnowledgeArea"/>
+        <NamedIndividual IRI="#Digital_Vedio_Production"/>
+        <NamedIndividual IRI="#IT_WMS_Perspectives_and_Impact"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasKnowledgeArea"/>
+        <NamedIndividual IRI="#Digital_Vedio_Production"/>
+        <NamedIndividual IRI="#IT_WMS_Technologies"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasKnowledgeArea"/>
+        <NamedIndividual IRI="#English"/>
+        <NamedIndividual IRI="#IT_GPP_Communications"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasKnowledgeArea"/>
+        <NamedIndividual IRI="#Enterprise_Applications_Development"/>
+        <NamedIndividual IRI="#IT_SWF_Concepts_and_Techniques"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasKnowledgeArea"/>
+        <NamedIndividual IRI="#Enterprise_Applications_Development"/>
+        <NamedIndividual IRI="#IT_SWF_Perspectives_and_Impact"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasKnowledgeArea"/>
+        <NamedIndividual IRI="#Enterprise_Applications_Development"/>
+        <NamedIndividual IRI="#IT_SWF_Problem_Solving_Strategies"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasKnowledgeArea"/>
+        <NamedIndividual IRI="#Enterprise_Applications_Development"/>
+        <NamedIndividual IRI="#IT_SWF_Program_Development"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasKnowledgeArea"/>
+        <NamedIndividual IRI="#Essentials_Of_Law"/>
+        <NamedIndividual IRI="#IT_GPP_Ethical_Legal_and_Privacy_Issues"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasKnowledgeArea"/>
+        <NamedIndividual IRI="#Essentials_Of_Law"/>
+        <NamedIndividual IRI="#IT_GPP_Intellectual_Property"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasKnowledgeArea"/>
+        <NamedIndividual IRI="#Financial_Accounting"/>
+        <NamedIndividual IRI="#IT_IDS_Fundamental_Concepts_In_Financial_Accounting"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasKnowledgeArea"/>
+        <NamedIndividual IRI="#Fundamentals_Of_Mathematics_And_Statistics"/>
+        <NamedIndividual IRI="#IT_DSC_Boolean_Algebra_Principles"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasKnowledgeArea"/>
+        <NamedIndividual IRI="#Fundamentals_Of_Mathematics_And_Statistics"/>
+        <NamedIndividual IRI="#IT_DSC_Logic"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasKnowledgeArea"/>
+        <NamedIndividual IRI="#Fundamentals_Of_Mathematics_And_Statistics"/>
+        <NamedIndividual IRI="#IT_DSC_Sets"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasKnowledgeArea"/>
+        <NamedIndividual IRI="#Fundamentals_of_Databases_And_Database_Design"/>
+        <NamedIndividual IRI="#IT_IMA_Data_Information_Concepts"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasKnowledgeArea"/>
+        <NamedIndividual IRI="#Fundamentals_of_Databases_And_Database_Design"/>
+        <NamedIndividual IRI="#IT_IMA_Data_Modeling"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasKnowledgeArea"/>
+        <NamedIndividual IRI="#Fundamentals_of_Databases_And_Database_Design"/>
+        <NamedIndividual IRI="#IT_IMA_Data_Organization_Architecture"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasKnowledgeArea"/>
+        <NamedIndividual IRI="#Fundamentals_of_Databases_And_Database_Design"/>
+        <NamedIndividual IRI="#IT_IMA_Database_Query_Languages"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasKnowledgeArea"/>
+        <NamedIndividual IRI="#Fundamentals_of_Databases_And_Database_Design"/>
+        <NamedIndividual IRI="#IT_IMA_Perspectives_and_Impact"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasKnowledgeArea"/>
+        <NamedIndividual IRI="#Human_Computer_Interaction"/>
+        <NamedIndividual IRI="#IT_UXD_Effective_Interfaces"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasKnowledgeArea"/>
+        <NamedIndividual IRI="#Human_Computer_Interaction"/>
+        <NamedIndividual IRI="#IT_UXD_Human_Centered_Evaluation"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasKnowledgeArea"/>
+        <NamedIndividual IRI="#Human_Computer_Interaction"/>
+        <NamedIndividual IRI="#IT_UXD_Human_Factors_In_Design"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasKnowledgeArea"/>
+        <NamedIndividual IRI="#Human_Computer_Interaction"/>
+        <NamedIndividual IRI="#IT_UXD_Perspectives__and_Impact"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasKnowledgeArea"/>
+        <NamedIndividual IRI="#IT_Project_Management"/>
+        <NamedIndividual IRI="#IT_GPP_Project_Management_Principles"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasKnowledgeArea"/>
+        <NamedIndividual IRI="#IT_Quality_Assurance"/>
+        <NamedIndividual IRI="#IT_SPA_Testing_and_Quality_Assurance"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasKnowledgeArea"/>
+        <NamedIndividual IRI="#Internetworking"/>
+        <NamedIndividual IRI="#IT_NET_Foundations_of_Networking"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasKnowledgeArea"/>
+        <NamedIndividual IRI="#Internetworking"/>
+        <NamedIndividual IRI="#IT_NET_Network_Management"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasKnowledgeArea"/>
+        <NamedIndividual IRI="#Internetworking"/>
+        <NamedIndividual IRI="#IT_NET_Routing_Switching_and_Internetworking"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasKnowledgeArea"/>
+        <NamedIndividual IRI="#Logic_Programming_And_Artificial_Cognitive_Systems"/>
+        <NamedIndividual IRI="#IT_DSC_Boolean_Algebra_Principles"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasKnowledgeArea"/>
+        <NamedIndividual IRI="#Logic_Programming_And_Artificial_Cognitive_Systems"/>
+        <NamedIndividual IRI="#IT_DSC_Logic"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasKnowledgeArea"/>
+        <NamedIndividual IRI="#Management_Accounting"/>
+        <NamedIndividual IRI="#IT_IDS_Fundamentals_in_Management_Accounting"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasKnowledgeArea"/>
+        <NamedIndividual IRI="#Management_Information_Systems"/>
+        <NamedIndividual IRI="#IT_GPP_Information_Systems_Principles"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasKnowledgeArea"/>
+        <NamedIndividual IRI="#Management_Of_Sensitive_Projects"/>
+        <NamedIndividual IRI="#IT_GPP_Project_Management_Principles"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasKnowledgeArea"/>
+        <NamedIndividual IRI="#Mobile_And_Wireless_Networks"/>
+        <NamedIndividual IRI="#IT_ANE_Mobile_Networks"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasKnowledgeArea"/>
+        <NamedIndividual IRI="#Mobile_And_Wireless_Networks"/>
+        <NamedIndividual IRI="#IT_ANE_Wireless_Networks"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasKnowledgeArea"/>
+        <NamedIndividual IRI="#Multimedia_Technologies"/>
+        <NamedIndividual IRI="#IT_WMS_Digital_Media"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasKnowledgeArea"/>
+        <NamedIndividual IRI="#Network_Programming"/>
+        <NamedIndividual IRI="#IT_ANE_Network_Programming"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasKnowledgeArea"/>
+        <NamedIndividual IRI="#Network_Programming"/>
+        <NamedIndividual IRI="#IT_ANE_Routing_Protocols"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasKnowledgeArea"/>
+        <NamedIndividual IRI="#Object_Oriented_Programming"/>
+        <NamedIndividual IRI="#IT_SWF_Problem_Solving_Strategies"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasKnowledgeArea"/>
+        <NamedIndividual IRI="#Object_Oriented_Programming"/>
+        <NamedIndividual IRI="#IT_SWF_Program_Development"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasKnowledgeArea"/>
+        <NamedIndividual IRI="#Operating_Systems"/>
+        <NamedIndividual IRI="#IT_PFT_Operating_Systems"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasKnowledgeArea"/>
+        <NamedIndividual IRI="#Principles_Of_Economics"/>
+        <NamedIndividual IRI="#IT_IDS_Fundamentals_In_Economics"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasKnowledgeArea"/>
+        <NamedIndividual IRI="#Principles_Of_Management"/>
+        <NamedIndividual IRI="#IT_IDS_Principles_Of_Management"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasKnowledgeArea"/>
+        <NamedIndividual IRI="#Principles_Of_Marketing"/>
+        <NamedIndividual IRI="#IT_IDS_Fundamentals_In_Marketing"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasKnowledgeArea"/>
+        <NamedIndividual IRI="#Professional_Practice"/>
+        <NamedIndividual IRI="#IT_GPP_Professional_Issues_and_Responsibilities"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasKnowledgeArea"/>
+        <NamedIndividual IRI="#Programming_Fundamentals"/>
+        <NamedIndividual IRI="#IT_SWF_Concepts_and_Techniques"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasKnowledgeArea"/>
+        <NamedIndividual IRI="#Programming_Fundamentals"/>
+        <NamedIndividual IRI="#IT_SWF_Perspectives_and_Impact"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasKnowledgeArea"/>
+        <NamedIndividual IRI="#Programming_Fundamentals"/>
+        <NamedIndividual IRI="#IT_SWF_Problem_Solving_Strategies"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasKnowledgeArea"/>
+        <NamedIndividual IRI="#Scientific_Communication"/>
+        <NamedIndividual IRI="#IT_GPP_Communications"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasKnowledgeArea"/>
+        <NamedIndividual IRI="#Scientific_Communication"/>
+        <NamedIndividual IRI="#IT_GPP_Employability_Skills_and_Careers_in_IT"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasKnowledgeArea"/>
+        <NamedIndividual IRI="#Social_Aspects_of_Information_Technology"/>
+        <NamedIndividual IRI="#IT_SRE_Government_Role_And_Regulations"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasKnowledgeArea"/>
+        <NamedIndividual IRI="#Social_Aspects_of_Information_Technology"/>
+        <NamedIndividual IRI="#IT_SRE_Social_Context_Of_Computing"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasKnowledgeArea"/>
+        <NamedIndividual IRI="#Software_Engineering_Methods"/>
+        <NamedIndividual IRI="#IT_SDM_Process_Models_And_Activities"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasKnowledgeArea"/>
+        <NamedIndividual IRI="#Software_Engineering_Methods"/>
+        <NamedIndividual IRI="#IT_SDM_Tools_And_Services"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasKnowledgeArea"/>
+        <NamedIndividual IRI="#Software_Engineering_Methods"/>
+        <NamedIndividual IRI="#IT_SPA_Requirements"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasKnowledgeArea"/>
+        <NamedIndividual IRI="#Software_Engineering_Methods"/>
+        <NamedIndividual IRI="#IT_SRE_Goals_Plans_Tasks_Deadlines_And_Risks"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasKnowledgeArea"/>
+        <NamedIndividual IRI="#Software_Management"/>
+        <NamedIndividual IRI="#IT_SDM_Deployment_Operations_Maintenance"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasKnowledgeArea"/>
+        <NamedIndividual IRI="#Software_Management"/>
+        <NamedIndividual IRI="#IT_SDM_Management"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasKnowledgeArea"/>
+        <NamedIndividual IRI="#Software_Management"/>
+        <NamedIndividual IRI="#IT_SDM_Process_Models_And_Activities"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasKnowledgeArea"/>
+        <NamedIndividual IRI="#Web_Technologies"/>
+        <NamedIndividual IRI="#IT_IST_Scripting_Techniques"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasKnowledgeArea"/>
+        <NamedIndividual IRI="#Web_Technologies"/>
+        <NamedIndividual IRI="#IT_WMS_Development_Frameworks"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasKnowledgeArea"/>
+        <NamedIndividual IRI="#Web_Technologies"/>
+        <NamedIndividual IRI="#IT_WMS_Perspectives_and_Impact"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasKnowledgeArea"/>
+        <NamedIndividual IRI="#Web_Technologies"/>
+        <NamedIndividual IRI="#IT_WMS_Technologies"/>
+    </ObjectPropertyAssertion>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#hasGradePoint"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#hasModuleType"/>
+    </FunctionalObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="#hasKnowledgeArea"/>
+    </AsymmetricObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="#hasPrerequisites"/>
+    </AsymmetricObjectProperty>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasGradePoint"/>
+        <Class IRI="#Module"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasKnowledgeArea"/>
+        <Class IRI="#Module"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasModuleType"/>
+        <Class IRI="#Module"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasPrerequisites"/>
+        <Class IRI="#Module"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasGradePoint"/>
+        <Class IRI="#GradePointValuePartition"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasKnowledgeArea"/>
+        <Class IRI="#IT-KnowledgeArea"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasModuleType"/>
+        <Class IRI="#ModuleTypeValuePartition"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasPrerequisites"/>
+        <Class IRI="#Module"/>
+    </ObjectPropertyRange>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#hasLabHours"/>
+        <DataProperty IRI="#hasHours"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#hasLectureHours"/>
+        <DataProperty IRI="#hasHours"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#hasTutorialHours"/>
+        <DataProperty IRI="#hasHours"/>
+    </SubDataPropertyOf>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#hasCredits"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#hasLectureHours"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#hasModuleCode"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#hasTutorialHours"/>
+    </FunctionalDataProperty>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasCredits"/>
+        <Class IRI="#Module"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasHours"/>
+        <Class IRI="#Module"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasLabHours"/>
+        <Class IRI="#Module"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasLectureHours"/>
+        <Class IRI="#Module"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasModuleCode"/>
+        <Class IRI="#Module"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasTutorialHours"/>
+        <Class IRI="#Module"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasCredits"/>
+        <Datatype abbreviatedIRI="xsd:decimal"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasHours"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasLabHours"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasLectureHours"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasModuleCode"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasTutorialHours"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+

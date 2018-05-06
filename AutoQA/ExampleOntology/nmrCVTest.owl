@@ -1,0 +1,323 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://nmrML.org/nmrCV#"
+     xml:base="http://nmrML.org/nmrCV"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#"
+     xmlns:protege="http://protege.stanford.edu/plugins/owl/protege#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:doap="http://usefulinc.com/ns/doap#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:meta="http://www.co-ode.org/ontologies/meta.owl#"
+     xmlns:obo="http://purl.obolibrary.org/obo/"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
+     xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <owl:Ontology rdf:about="http://nmrML.org/nmrCV">
+        <owl:imports rdf:resource="http://purl.obolibrary.org/obo/bfo.owl"/>
+        <dc:rights>Creative Commons Public Domain Mark 1.0</dc:rights>
+        <doap:maintainer rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.metabolomics-msi.org/
+http://phenomenal-h2020.eu/home/
+http://www.cosmos-fp7.eu/WP2</doap:maintainer>
+        <doap:documenter rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Daniel Schober</doap:documenter>
+        <doap:bug-database rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://github.com/nmrML/nmrML/issues</doap:bug-database>
+        <doap:audience rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This CV is to be used by metabolomics researchers, or basically any chenomics or proteomics researchers  who apply the  nmrML xml to store their NMRraw data in a vendor agnostic manner. But nmrML can also be used to capture experimental results  and (limited) basic metadata like molecule to spectral feature assignments.</doap:audience>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This artefact is an MSI-approved controlled vocabulary primarily developed under COSMOS EU and PhenoMeNal EU governance. The nmrCV is supporting the nmrML XML format with standardized terms. nmrML is a vendor agnostic open access NMR raw data standard. Its primaly role is  analogous to the mzCV for the PSI-approved mzML XML format. It uses BFO2.0 as its Top level.
+ This CV was derived from two predecessors (The NMR CV from the David Wishart Group, developed by Joseph Cruz) and the MSI nmr CV developed by Daniel Schober at the EBI.  This simple taxonomy of terms (no DL semantics used) serves the nuclear magnetic resonance markup language (nmrML) with meaningful descriptors to amend the nmrML xml file with CV terms. Metabolomics scientists are encouraged to use this CV to annotrate their raw and experimental context data, i.e. within nmrML. The approach to have an exchange syntax mixed of an xsd and CV stems from the PSI mzML effort. The reason to branch out from an xsd into a CV is, that in areas where the terminology is likely to change faster than the nmrML xsd could be updated and aligned, an externally and decentrallised maintained CV can accompensate for such dynamics in a more flexible way. A second reason for this set-up is that semantic validity of CV terms used in an nmrML XML instance (allowed CV terms, position/relation to each other, cardinality) can be validated by rule-based proprietary validators:  By means of cardinality specifications and XPath expressions defined in an XML mapping file (an instances of the CvMappingRules.xsd ), one can define what ontology terms are allowed in a specific location of the data model.</obo:IAO_0000115>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1.1.0</owl:versionInfo>
+        <doap:location rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://github.com/nmrML/nmrML/tree/master/ontologies</doap:location>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.metabolomicscentre.ca/nmrML/msi-nmr.obo</owl:deprecated>
+        <dc:contributor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Catherine Deborde</dc:contributor>
+        <dc:coverage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nuclear magnetic resonance (NMR) data annotation as required by the msi sanctioned open access nmrML XML format developed by the COSMOS EU project.</dc:coverage>
+        <doap:mailing-list rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://groups.google.com/forum/?hl=en#!forum/nmrml/join</doap:mailing-list>
+        <dc:contributor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Daniel Jacob</dc:contributor>
+        <oboInOwl:hasOBOFormatVersion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1.2</oboInOwl:hasOBOFormatVersion>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-10-19T10:11:26Z</oboInOwl:creation_date>
+        <dc:contributor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reza Salek</dc:contributor>
+        <dc:contributor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Michael Wilson</dc:contributor>
+        <obo:IAO_0000232 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">In case we like to be able to convert this owl CV back into the obo format, we should only use DL/owl constructs that are supported by obo. Hence, editors of this CV should take care not to use any higher descriptrion logics semantics, i.e. cardinality restrictions or defined terms using constructors. We should start to build the taxonomic backbone first and later connect the main axis via relations. 
+If we want to use restrictions, we should only use existential quantifiers as the OBO format does not support universal quantification.
+
+List of terms required by current XSD (August 2013): these were bookmarked in CV (annotation property) and are visible in the new nmrTab:
+
+CVTerm occurrences:
+buffer--&gt;buffer
+solvent--&gt;solvent
+concentration standard type--&gt;calibration compound , what is chemical shift reference ?  What calibration_reference_shift under calibration compound ?
+concentration standard name	we here see a use-mention problem arising for the CV. The xsd should probably change here to avoid this.
+encoding method (Quadrature detection method)	is this the same as encoding method ?
+sample container--&gt;NMR_sample_holder
+(spectrum) y axis type--&gt;coordinate system descriptor
+post acquisition solvent suppression method	Two usages in xsd, but with differrent type ?  --&gt;solvent suppression method
+calibration compound	Two usages in xsd, but with differrent type ?--&gt;calibration compound
+data transformation method--&gt;data transformation method
+(spectral) projection method--&gt;projection method
+spectral denoising method--&gt;spectral denoising method
+window function method--&gt;window function method
+baseline correction method--&gt;baseline correction
+sample type--&gt;NMR sample
+
+CVParam occurrences:
+file content--&gt;data file content
+software type--&gt;software
+source file type--&gt;data file attribute (needs refactoring)
+instrument configuration type--&gt;instrument configuration
+processing method type--&gt;data processing method
+
+CVParamType occurrences:
+chemical shift standard--&gt;chemical shift standard
+solvent suppression method--&gt;solvent suppression method
+encoding scheme (Quadrature detection method)--&gt;encoding method
+window function parameter--&gt;window function parameter
+
+CVParamWithUnitType occurrences:
+CVParamWithUnitType is currently not used in the xsd and dangling ! I assume ValueWithUnitType substitutes it ?
+
+UserParamType occurrences:
+No CV terms needed
+
+ValueWithUnitType occurrences:
+These will have to be used from the Unit ontology.</obo:IAO_0000232>
+        <oboInOwl:auto-generated-by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OBO-Edit 2.2</oboInOwl:auto-generated-by>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This version (1.1.0) uses the Basic Formal Ontology (BFO) as its top level ontology.  We might at some point close the resulting semantic gap by using OBI and IAO as intermediate bridges.</rdfs:comment>
+        <foaf:homepage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://nmrml.org/cv/</foaf:homepage>
+        <oboInOwl:saved-by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">dschober</oboInOwl:saved-by>
+        <dc:contributor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Joseph Cruz</dc:contributor>
+        <dc:format rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OWL
+
+MIME type  application/rdf+xml
+
+(Rather flat CV in OWL syntax. Taxonomic backbone with few relations used. No OWL DL complexity such as cardinalities, blank nodes, nested class definitions. The Semantic Validator used an OBO converted file format due to historic reasons. The OBO file is auto-generated-by the OWL API (version 3.4.2).)</dc:format>
+        <dc:contributor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Philippe Rocca-Serra</dc:contributor>
+        <obo:IAO_0000112 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://nmrml.org/examples/</obo:IAO_0000112>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Daniel Schober</oboInOwl:created_by>
+        <dc:contributor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Steffen Neumann</dc:contributor>
+        <dc:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">nuclear magnetic resonance CV</dc:title>
+        <protege:defaultLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">en</protege:defaultLanguage>
+        <dc:contributor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Daniel Schober</dc:contributor>
+        <dc:contributor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Since this is a prolonged effort spanning a larger time period, there naturally were many people involved in the creation over the years and during different times.
+
+People involved in the term creation from ID &gt;1400000 :
+
+This part of the  NMR ontology was originally developed by the ontology working group (http://msi-ontology.sourceforge.net/) of the msi-metabolomicssociety (msi-workgroups.sf.net):
+
+Daniel Schober (EBI)
+Chris Taylor (EBI and HUPO-PSI)
+Dennis Rubtsov (Un of Cambridge, UK)
+Helen Jenkins (Un of Wales, Aberystwyth, UK)
+Irena Spasic (Center for Integrative Systems Biology, Manchester, UK)
+Larissa Soldatova (University of Wales, Aberystwyth, UK)
+Philippe Rocca-Serra (EBI and MGED Society)
+Susanna-Assunta Sansone (EBI)
+
+People involved in the term creation from ID&lt;1400000:
+
+Joseph Cruz
+Daniel Schober
+Michael Wilson
+Reza Salek
+Daniel Jacob
+David Wishart
+
+Terms with IDs  ID&lt;1400000 that were NOT asserted in the original Wishart obo file were created by Daniel Schober (COSMOS WP2). Its IDs were autogenerated with the Protege ID generator. 
+
+Other people that substantially helped in revising the latest and Cosmos governed CV additions were:
+
+Michael Wilson, Wishart Group, Edmonton, Alberta, Canada
+Daniel Jacob, INRA, Bordeaux, France
+Annick Moing, INRA, Bordeaux, France
+Catherine Deborde, INRA, Bordeaux, France
+Reza Salek, EBI, Hinxton, UK
+Philippe Rocca-Serra, University of Oxford, Oxford, UK
+Andrea Porzel, IPB-Halle, Germany
+and the COSMOS WP2 team
+
+A paper describing the overall nmrML data standard and CV has been accepted by Analytical Chemistry (Manuscript ID: ac-2017-02795f.R1), title
+`nmrML: a community supported open data standard for the description, storage, and exchange of NMR data`, author(s): Schober, Daniel; Jacob, Daniel; Wilson, Michael; Cruz, Joseph; Marcu, Ana; Grant, Jason; Moing, Annick; Deborde, Catherine; de Figueiredo, Luis; Haug, Kenneth; Rocca-Serra, Philippe; Easton, John; Ebbels, Timothy; Hao, Jie; Ludwig, Christian; Günther, Ulrich; Rosato, Antonio; Klein, Matthias; Lewis, Ian; Luchinat, Claudio; Jones, Andrew; Grauslys, Arturas; Larralde, Martin; Yokochi, Masashi; Kobayashi, Naohiro; Porzel, Andrea; Griffin, Julian; Viant, Mark; Wishart, David; Steinbeck, Christoph; Salek, Reza; Neumann, Steffen</dc:contributor>
+        <doap:implements rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://github.com/nmrML/nmrML</doap:implements>
+        <dc:contributor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Annick Moing</dc:contributor>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000115 -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000115">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">definition</rdfs:label>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/coverage -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/coverage"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/source -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/source"/>
+    
+
+
+    <!-- http://usefulinc.com/ns/doap#bug-database -->
+
+    <owl:AnnotationProperty rdf:about="http://usefulinc.com/ns/doap#bug-database"/>
+    
+
+
+    <!-- http://www.geneontology.org/formats/oboInOwl#auto-generated-by -->
+
+    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#auto-generated-by"/>
+    
+
+
+    <!-- http://www.geneontology.org/formats/oboInOwl#consider -->
+
+    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#consider"/>
+    
+
+
+    <!-- http://www.geneontology.org/formats/oboInOwl#creation_date -->
+
+    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#creation_date"/>
+    
+
+
+    <!-- http://www.geneontology.org/formats/oboInOwl#date -->
+
+    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#date"/>
+    
+
+
+    <!-- http://www.geneontology.org/formats/oboInOwl#default-namespace -->
+
+    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#default-namespace"/>
+    
+
+
+    <!-- http://www.geneontology.org/formats/oboInOwl#hasBroadSynonym -->
+
+    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#hasBroadSynonym"/>
+    
+
+
+    <!-- http://www.geneontology.org/formats/oboInOwl#hasDbXref -->
+
+    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#hasDbXref">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">database_cross_reference</rdfs:label>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://www.geneontology.org/formats/oboInOwl#hasExactSynonym -->
+
+    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has_exact_synonym</rdfs:label>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://www.geneontology.org/formats/oboInOwl#hasOBOFormatVersion -->
+
+    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#hasOBOFormatVersion">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has_obo_format_version</rdfs:label>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://www.geneontology.org/formats/oboInOwl#hasOBONamespace -->
+
+    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#hasOBONamespace">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has_obo_namespace</rdfs:label>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://www.geneontology.org/formats/oboInOwl#id -->
+
+    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#id"/>
+    
+
+
+    <!-- http://www.geneontology.org/formats/oboInOwl#saved-by -->
+
+    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#saved-by"/>
+    
+
+
+    <!-- http://www.w3.org/2000/01/rdf-schema#comment -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2000/01/rdf-schema#comment"/>
+    
+
+
+    <!-- http://www.w3.org/2000/01/rdf-schema#label -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2000/01/rdf-schema#label"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#altLabel -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#altLabel"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#definition -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#definition"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#editorialNote -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#editorialNote"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#example -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#example"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#scopeNote -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#scopeNote"/>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/homepage -->
+
+    <owl:AnnotationProperty rdf:about="http://xmlns.com/foaf/0.1/homepage"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+
