@@ -27,3 +27,6 @@ ontospy==1.8.6
 pronto=0.10.2
 ontobio=0.2.27
 django-fileprovider=0.1.4
+pydub=0.21.0
+google-cloud=0.32.0
+gapic-google-cloud-speech-v1beta1=0.15.3

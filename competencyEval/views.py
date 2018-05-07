@@ -11,7 +11,8 @@ from django.shortcuts import render,render_to_response
 from django.http import JsonResponse,HttpResponse,HttpResponseRedirect
 from pydub import AudioSegment
 from django.views.decorators.csrf import csrf_exempt
-from google.cloud import speech_v1p1beta1 as speech
+#from google.cloud import speech_v1p1beta1 as speech #this only for below versions of google-cloud 0.28.1
+from google.cloud import speech #this is for after versions of google-cloud 0.32.0
 from . similarity_check import para_similarity
 
 

@@ -2,6 +2,7 @@
 from django.http import HttpResponse
 from .compromise import *
 from .QFormat import *
+from django.shortcuts import render,render_to_response
 from owlready2 import *
 
 
@@ -29,32 +30,5 @@ def index(request):
 
     return HttpResponse(str)
 
-def ontoReturn(request):
-    target = os.path.join(APP_ROOT, 'ExampleOntology')
-    if not os.path.isdir(target):
-        os.mkdir(target)
-
-    target = os.path.join(target, 'nmrCV.owl')
-    #target = "".join([target, " [ nmrCV.owl"])
-    #target.replace('[', '\'')
-    # print(target)
-
-    # ont = OntologyFactory().create("file://"+target)
-    #ont = pronto.Ontology("http://nmrml.org/cv/v1.1.0/nmrCV.owl")
-    #ont = pronto.Ontology("file:///"+target)
-
-    #response = HttpResponse(mimetype='application/force-download')  # mimetype is replaced by content_type for django 1.7
-    #response['Content-Disposition'] = 'attachment; filename=%s' % smart_str("nmrCV.owl")
-    #response['X-Sendfile'] = smart_str(target)
-    #response = HttpResponse(content_type='application/force-download')
-
-    #return HttpResponse(target)
-    # It's usually a good idea to set the 'Content-Length' header too.
-    # You can also set any other required headers: Cache-Control, etc.
-
-    # code    to     check or protect    the    file    from unauthorized access
-    response = HttpResponse()
-    response['X-File'] = target
-    #return response['X-File']
-
-    return response
+def codeSnippet(request):
+    return render_to_response('AutoQATemplates/code_compare.html')
