@@ -3,10 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <title>code compare</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 </head>
 <body>
- <!--<h1>Hello World</h1>-->
-<iframe src='http://www.programmr.com/embed.php?action=tf&path=demostudent//view/temp_1525703790/Example.java' width='100%' height='400' frameborder='0'></iframe>
+ <h1>Use following space to code according to the question</h1>
+<!--<iframe src='http://www.programmr.com/embed.php?action=tf&path=demostudent//view/temp_1525703790/Example.java' width='100%' height='400' frameborder='0'></iframe> -->
+
+ <table>
+            <tr>
+                <!--<td>
+                    <div class="tag">HTML (Body)</div>
+                    <div id="html" class="content" contenteditable></div>
+                </td> -->
+                <td>
+                    <div class="tag">JAVA</div>
+                    <div id="Code" class="content" contenteditable></div>
+                </td>
+            </tr>
+ </table>
+ <button type="CodePostButton" onclick="onCodePostButtonClick('onCodePostButtonClick/');">Click Me!</button>
  <!--<table>
             <tr>
                 <td>
@@ -32,8 +47,47 @@
 </body>
 </html>
 <script>
-$("#launch")[0].onclick = null;
-$("#launch").click(function() { alert("done") });
+{#    function onCodePostButtonClick(url) {#}
+{#                //window.open(url);#}
+{#                var str = document.getElementById('Code').innerHTML.toString();#}
+{##}
+{#                $.get(url +str+'/', function (data) {#}
+{#                    alert("counter updated!" + toString(data));#}
+{#                });#}
+{##}
+{#                $.ajax({#}
+{#                  type: "POST",#}
+{#                  url: url,#}
+{#                  data: str,#}
+{#                  dataType: String#}
+{#                }).done(function () {#}
+{#                    alert("Done");#}
+{#                }).fail(function () {#}
+{#                    alert("fail")#}
+{#                });#}
+{#                        }#}
+//$('#buttonId').click(function() {
+function onCodePostButtonClick(url){
+        var str = document.getElementById('Code').innerHTML.toString();
+    $.ajax({
+        url: url,
+        //method: 'POST', // or another (GET), whatever you need
+        type:"POST",
+        data: {
+            nameStr: str, // data you need to pass to your function
+            click: true
+        },
+        success: function (data) {
+            // success callback
+            // you can process data returned by function from views.py
+            alert("Status Code : " + data);
+        },
+        error: function (request, status, error) {
+            alert("Fail");
+            alert(request.responseText);
+    }
+    });
+}
 window.onload=function(){
     var html=document.getElementById("html"),
         css=document.getElementById("css"),
@@ -61,7 +115,15 @@ window.onload=function(){
 }
 </script>
 <style>
-html,body,table,div.content,iframe{
+
+table{
+    border:0;
+    height:50%;
+    margin:0;
+    padding:0;
+    width:50%;
+}
+html,body,div.content,iframe{
     border:0;
     height:100%;
     margin:0;
