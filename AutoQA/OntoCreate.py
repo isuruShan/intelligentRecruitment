@@ -50,7 +50,7 @@ class OntoCreate:
         # t1 = Term('ONT:001', 'my 1st term', 'this is my first term')
         # t2 = Term('ONT:0002', 'my 2nd term', 'this is my second term', {Relationship('part_of'): ['ONT:001']})
 
-        #Here we prepare key value dataset to enter to the ontology
+        #region Here we prepare key value dataset to enter to the ontology
         #START
         termList = {}
         termList['Software engineering'] = 'Software engineering is an engineering branch associated with software system development'
@@ -81,7 +81,7 @@ class OntoCreate:
         termList['functional programming'] = 'Functional programming is style of programming language, which uses the concepts of mathematical function. It provides means of computation as mathematical functions, which produces results irrespective of program state'
         termList['acid properties'] = {}
         termList['acid properties']['acid properties'] = 'ACID is an acronym for atomicity, consistency, isolation, and durability'
-        termList['acid properties']['Atomicity '] = 'This property states that a transaction must be treated as an atomic unit, that is, either all of its operations are executed or none. There must be no state in a database where a transaction is left partially completed. States should be defined either before the execution of the transaction or after the execution/abortion/failure of the transaction'
+        termList['acid properties']['Atomicity'] = 'This property states that a transaction must be treated as an atomic unit, that is, either all of its operations are executed or none. There must be no state in a database where a transaction is left partially completed. States should be defined either before the execution of the transaction or after the execution/abortion/failure of the transaction'
         termList['acid properties']['Consistency '] = 'The database must remain in a consistent state after any transaction. No transaction should have any adverse effect on the data residing in the database. If the database was in a consistent state before the execution of a transaction, it must remain consistent after the execution of the transaction as well'
         termList['acid properties']['Durability '] = 'The database should be durable enough to hold all its latest updates even if the system fails or restarts. If a transaction updates a chunk of data in a database and commits, then the database will hold the modified data. If a transaction commits but the system fails before the data could be written on to the disk, then that data will be updated once the system springs back into action'
         termList['acid properties']['Isolation '] = 'In a database system where more than one transaction are being executed simultaneously and in parallel, the property of isolation states that all the transactions will be carried out and executed as if it is the only transaction in the system. No transaction will affect the existence of any other transaction'
@@ -94,36 +94,49 @@ class OntoCreate:
         termList['difference between object oriented programming language and object based programming language'] = 'Object based programming languages follow all the features of OOPs except Inheritance. Examples of object based programming languages are JavaScript, VBScript etc'
         termList['constructor'] = 'Constructor is just like a method that is used to initialize the state of an object. It is invoked at the time of object creation'
         #END
+        #endregion
 
-        #Here we add above prepared key value pairs to the ontology
+        #region Here we add above prepared key value pairs to the ontology
         #START
         x =0
         termListObject = {}
         for key in termList:
             if(isinstance(key, str)):
-                x = x+1
-                ontVal = 'ONT:' + str(x).zfill(6)
-                termListObject[ontVal]  = Term('ONT:' + str(x).zfill(6), key, termList[key])
+                if(str(termList[key]).find("{")==-1): #not found { mark in termList[key]
+                    x = x + 1
+                    ontVal = 'ONT:' + str(x).zfill(6)
+                    termListObject[ontVal] = Term('ONT:' + str(x).zfill(6), key, termList[key])
 
-            else:
-                for innerKey in termList[key]:
-                    if (isinstance(innerKey, str)):
-                        x = x + 1
-                        ontValInner = 'ONT:' + str(x).zfill(6)
-                        termListObject[ontValInner] = Term('ONT:' + str(x).zfill(6), innerKey, termList[key][key], {Relationship('part_of'): [ontVal]})
-                    else:
-                        for innerInnerKey in termList[key][innerKey]:
-                            x = x + 1
-                            ontValInnerInner = 'ONT:' + str(x).zfill(6)
-                            termListObject[ontValInnerInner] = Term('ONT:' + str(x).zfill(6), innerInnerKey, termList[key][innerKey][innerInnerKey], {Relationship('part_of'): [ontValInner]})
+                else:
+                    check = 1
+                    for innerKey in termList[key]:
+                        if (str(termList[key][innerKey]).find("{") == -1):
+                            if (isinstance(innerKey, str)):
+                                if(check==1):
+                                    x = x + 1
+                                    ontValInnerFirst = 'ONT:' + str(x).zfill(6)
+                                    termListObject[ontValInnerFirst] = Term('ONT:' + str(x).zfill(6), innerKey, termList[key][innerKey])
+                                    check= check + 1
+                                else:
+                                    x = x + 1
+                                    ontValInner = 'ONT:' + str(x).zfill(6)
+                                    termListObject[ontValInner] = Term('ONT:' + str(x).zfill(6), innerKey, termList[key][innerKey], {Relationship('part_of'): [ontValInnerFirst]})
+                                    ontValToFollowNext = 'ONT:' + str(x + 1).zfill(6)
+                        else:
+                            for innerInnerKey in termList[key][innerKey]:
+                                x = x + 1
+                                ontValInnerInner = 'ONT:' + str(x).zfill(6)
+                                termListObject[ontValInnerInner] = Term('ONT:' + str(x).zfill(6), innerInnerKey, termList[key][innerKey][innerInnerKey], {Relationship('part_of'): [ontValToFollowNext]})
 
         #END
+        #endregion
 
-        #Here we add terms to the ontology using pronto include term
+        #region Here we add terms to the ontology using pronto include term
         #START
         for key in termListObject:
             ontSoftwareEngineer.include(termListObject[key])  #ontSoftwareEngineer.include(t1, t2)
         #END
+        #endregion
 
         print(ontSoftwareEngineer.obo)
         print("********************************* The Json Obj **************************************")
@@ -136,8 +149,7 @@ class OntoCreate:
 
     def AddQualityAsuranceEngineerTerms(self):
 
-        print(
-            "********************************* Adding SoftwareEngineer Terms to the ontology **************************************")
+        print("********************************* Adding SoftwareEngineer Terms to the ontology **************************************")
 
         target = os.path.join(APP_ROOT, 'ExampleOntology\\')
         if not os.path.isdir(target):

@@ -21,9 +21,6 @@ def index(request):
     ontoAnsArry = ArryObj["ontoAnsArry"]
 
     str02 = ""
-    # for x in range(0, 3):
-    #     str02 = classCompromise.compromise()
-    #     str = str + "</br> </br>" + str02
 
     for x in range(0, 10):
         random_index = randrange(0, len(ontoQstArry))

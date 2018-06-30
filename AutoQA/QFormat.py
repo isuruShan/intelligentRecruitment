@@ -24,7 +24,9 @@ from django.utils.encoding import smart_str
 APP_ROOT = os.path.dirname(os.path.abspath(__file__))
 
 class QFormat:
-    def OntologyQuestions(self):
+    def OntologyQuestions(self, InterviewRole):
+
+        InterviewRole = InterviewRole
 
         target = os.path.join(APP_ROOT, 'ExampleOntology\\')
         if not os.path.isdir(target):
