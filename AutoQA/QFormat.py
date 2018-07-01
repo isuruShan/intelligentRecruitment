@@ -4,6 +4,9 @@ from random import randrange
 import requests
 import language_check
 from owlready2 import *
+
+from AutoQA.QCheckNLP import QCheckNLP
+from AutoQA.WeightAdd import WeightAdd
 from .OntoCreate import *
 import os
 import ast
@@ -26,6 +29,11 @@ APP_ROOT = os.path.dirname(os.path.abspath(__file__))
 class QFormat:
     def OntologyQuestions(self, InterviewRole):
 
+        # if role is SE InterviewRole=1
+        # if role is SE InterviewRole=2
+        # if role is SE InterviewRole=3
+        # if role is SE InterviewRole=4
+        # if role is SE InterviewRole=5
         InterviewRole = InterviewRole
 
         target = os.path.join(APP_ROOT, 'ExampleOntology\\')
@@ -137,42 +145,19 @@ class QFormat:
                 ontoAnsArry.append(childrenArry[i])
             i = i + 1
 
-        QFormatClass = QFormat()
+        #region Here we are choosing if the questions are in the right grammer format
+        QCheckNLPClass = QCheckNLP()
+        i=0
+        for question in ontoQstArry:
+            if(QCheckNLPClass.GetQuestion(question) == False):
+                ontoQstArry.removeAt(i)
+                ontoAnsArry.removeAt(i)
+                i = i+1
+        #endregion
+
+        #region Here we add the weighted values to each questions
+        QFormatClass = WeightAdd()
         ArryObj = QFormatClass.QuestionReform(ontoQstArry, ontoAnsArry)
-        return ArryObj
+        #endregion
 
-    def QuestionReform(self, ontoQstArry, ontoAnsArry):
-
-        ontoQstArryConfidence = []
-        ontoAnsArryConfidence = []
-
-        for elemnt in ontoQstArry:
-            data = json.dumps(get_ginger_result(elemnt))
-            #FirstObj = json.loads(data, object_hook=lambda d: namedtuple('X', d.keys())(*d.values()))
-            FirstObj = json.loads(data)
-            for key in FirstObj:
-                for innerKey in FirstObj[key]:
-                    for innerInnerKey in innerKey:
-                        #print(str(innerInnerKey) + ":" + str(innerKey[innerInnerKey]))
-                        #if (isinstance(str(innerKey['Confidence']), str)):
-                        ontoQstArryConfidence.append(str(innerKey['Confidence']))
-
-        #InnerObj = FirstObj.LightGingerTheTextResult
-        for elemnt in ontoAnsArry:
-            data = json.dumps(get_ginger_result(elemnt))
-            #FirstObj = json.loads(data, object_hook=lambda d: namedtuple('X', d.keys())(*d.values()))
-            FirstObj = json.loads(data)
-            for key in FirstObj:
-                for innerKey in FirstObj[key]:
-                    for innerInnerKey in innerKey:
-                        print("check over")
-                        #print(str(innerInnerKey) + ":" + str(innerKey[innerInnerKey]))
-                        # if (isinstance(str(innerKey['Confidence']), str)):
-                        #     ontoAnsArryConfidence.append(str(innerKey['Confidence']))
-
-        ArryObj = {}
-        ArryObj["ontoQstArry"] = ontoQstArry
-        ArryObj["ontoAnsArry"] = ontoAnsArry
-        ArryObj["ontoQstArryConfidence"] = ontoQstArryConfidence
-        ArryObj["ontoAnsArryConfidence"] = ontoAnsArryConfidence
         return ArryObj

@@ -16,7 +16,7 @@ def index(request):
     QFormatClass = QFormat()
 
 
-    ArryObj = QFormatClass.OntologyQuestions()
+    ArryObj = QFormatClass.OntologyQuestions(1)
     ontoQstArry = ArryObj["ontoQstArry"]
     ontoAnsArry = ArryObj["ontoAnsArry"]
 
