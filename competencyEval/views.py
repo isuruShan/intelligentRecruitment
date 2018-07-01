@@ -15,6 +15,9 @@ from django.views.decorators.csrf import csrf_exempt
 from google.cloud import speech_v1p1beta1 as speech
 from . similarity_check import para_similarity
 from django.shortcuts import redirect
+from .post_for_model import post
+from .QA import SetOfQA
+import json
 
 
 
@@ -25,66 +28,38 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 #google cloude auth file
 os.environ["GOOGLE_APPLICATION_CREDENTIALS"]="/home/isuru/PycharmProjects/gSpeechTest/MyFirstProject-28a3d7098e7b.json"
 
-
-def index(request):
-    return redirect('interview', backend=2, question='what is java?')
-
-
-def interview_index(request):
-
-
-    return render_to_response('cmp_transcribe.html')
-
-def interview(request, backend, question):
-    context = {
-        'number': backend,
-        'question': question
-    }
-    return  render_to_response('interview.html', context)
-
 @csrf_exempt
-def transcribe_view(request):
-    data = request.body
-    file = wave.open("test_audio4.wav","w")
-    file.setnchannels(1)
-    file.setsampwidth(2)
-    file.setframerate(8000)
-    file.writeframes(data)
+def index(request):
+    if request.method == 'GET':
+        return render_to_response('clarify_category.html')
+    elif request.method == 'POST':
+        json_data = json.loads(request.body)
+        request.session['uname'] = json_data['name']
+        request.session['urole'] = json_data['role']
+        request.session['qnum'] = 1
+        result_1 = {'result': '1'}
+        return JsonResponse(result_1)
 
 
-
-    #using deepgram brain to get the transcript
-    client = speech.SpeechClient()
-
-    with open("ExternalFiles/Recording_3.wav", 'rb') as audio_file:
-        content = audio_file.read()
-    audio = speech.types.RecognitionAudio(content=content)
-    config = speech.types.RecognitionConfig(
-        enable_automatic_punctuation=True,
-        enable_word_time_offsets=True,
-        encoding=speech.enums.RecognitionConfig.AudioEncoding.LINEAR16,
-        language_code='en-US',
-        model='default')
-
-    response = client.recognize(config, audio)
-    para_2 = ""
-
-    for i, result in enumerate(response.results):
-        alternative = result.alternatives[0]
-        print('-' * 20)
-        # print('First alternative of result {}'.format(i))
-        print('Transcript: {}'.format(alternative.transcript))
-        para_2 = alternative.transcript
-    para_similarity("Java is a Murray riding programming language, which is very good language to build a pond.", para_2)
-    result_1 = {"result": para_2}
-
-    return JsonResponse(result_1)
+def interview(request):
+    print(request.session['qnum'])
+    qnum = request.session['qnum']
+    name = request.session['uname']
+    list = SetOfQA.q_and_a()
+    if qnum <= len(list):
+        context = {
+            'name' : name,
+            'number': qnum,
+            'question': list[qnum-1].q,
+        }
+        return  render_to_response('interview.html', context)
+    else:
+        return render_to_response('complete.html')
 
 
 @csrf_exempt
 def transcript(request):
     data = request.body
-    print(data)
     file = wave.open("test_a.wav", "w")
     file.setnchannels(1)
     file.setsampwidth(4)
@@ -122,14 +97,42 @@ def transcript(request):
                 start = i.start_time.seconds + i.start_time.nanos * 1e-9
             end = i.end_time.seconds + i.end_time.nanos * 1e-9
             word_counter += 1
-    print(start)
-    print(end)
-    print(word_counter)
+    word_fre = word_counter*60/(end - start)
     print(word_counter*60/(end - start))
-    similarity_score = para_similarity("Java is a Murray riding programming language, which is very good language to build a pond.",para_2)
-    result_1 = {"result": para_2,  "score": round(similarity_score,2)}
-    print(similarity_score)
+    res, res2 = post(data, word_fre)
+    result_1 = {"result": para_2, "confidence": res}
     return JsonResponse(result_1)
+
+@csrf_exempt
+def decision(request):
+    json_data = json.loads(request.body)
+    qnum = request.session['qnum']
+    user_answer = json_data['answer']
+    user_confidence = json_data['confidence']
+    list = SetOfQA.q_and_a()
+    sys_answer = list[qnum-1].a
+    similarity_score = para_similarity(
+        user_answer, sys_answer)
+
+    conf_value = 0
+    if user_confidence == 0:
+        conf_value = .3
+    elif user_confidence == 1:
+        conf_value = .1
+    elif user_confidence == 2:
+        conf_value = .6
+    elif user_confidence == 3:
+        conf_value = .3
+
+    score = .3*conf_value + .7*similarity_score
+    qnum += 1
+    request.session['qnum'] = qnum
+    return JsonResponse({'sucess':1})
+
+
+
+
+
 
 
 
