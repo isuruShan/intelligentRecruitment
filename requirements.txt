@@ -25,7 +25,7 @@ django-fa==1.0.0
 django-fileprovider==0.1.4
 eyeD3==0.8.5
 Flask==1.0.2
-Flask-Cors==3.0.6
+Flask-Cors==3.0.9
 fontawesome==4.7.0.post5
 future==0.16.0
 gapic-google-cloud-datastore-v1==0.15.3
