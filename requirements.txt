@@ -18,7 +18,7 @@ cycler==0.10.0
 deepgram-brain==0.1.1
 defusedxml==0.5.0
 dill==0.2.7.1
-Django==1.11.8
+Django==2.2.24
 django-allauth==0.34.0
 django-bootstrap4==0.0.6
 django-fa==1.0.0
