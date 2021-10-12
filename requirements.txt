@@ -85,7 +85,7 @@ numpy==1.14.3
 oauth2client==3.0.0
 oauthlib==2.0.6
 ontospy==1.9.1
-opencv-contrib-python==3.4.1.15
+opencv-contrib-python==4.2.0.32
 Owlready2==0.5
 parsel==1.4.0
 pathlib==1.0.1
